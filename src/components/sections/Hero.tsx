@@ -47,22 +47,32 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: EASE }}
-            className="flex flex-col sm:flex-row items-center gap-4"
+            className="flex flex-col sm:flex-row items-center gap-8"
           >
-            <Button
-              variant="primary"
-              href={COPY.hero.whatsappLink}
-              className="!px-10 !py-4 !text-base"
-            >
-              {COPY.hero.cta}
-            </Button>
-            <Button
-              variant="secondary"
-              href="#retreat"
-              className="!px-10 !py-4 !text-base"
-            >
-              {COPY.hero.retreatCta}
-            </Button>
+            <div className="flex flex-col items-center gap-2">
+              <Button
+                variant="primary"
+                href={COPY.hero.whatsappLink}
+                className="!px-10 !py-4 !text-base"
+              >
+                {COPY.hero.cta}
+              </Button>
+              <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+                {COPY.hero.ctaMicro}
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Button
+                variant="secondary"
+                href="#retreat"
+                className="!px-10 !py-4 !text-base"
+              >
+                {COPY.hero.retreatCta}
+              </Button>
+              <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+                {COPY.hero.retreatMicro}
+              </p>
+            </div>
           </motion.div>
         )}
       </div>
