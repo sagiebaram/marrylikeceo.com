@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { COPY } from "@/constants/copy";
 
@@ -11,23 +10,32 @@ const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 export const Hero = () => {
 
   return (
-    <Section
-      theme="dark"
+    <section
       id="hero"
-      className="!min-h-screen relative overflow-hidden !px-0 !py-0 lg:!px-0 lg:!py-0"
+      className="relative min-h-[75svh] md:min-h-screen overflow-hidden bg-[var(--bg-dark)] text-[var(--text-light)]"
     >
-      {/* Background image — no overlay, full clarity */}
+      {/* Background image — dimmed on mobile, full clarity on desktop */}
       <Image
         src="/images/hero.jpg"
         alt="Marry Like a CEO"
         fill
-        className="object-cover object-center"
+        className="object-cover object-[70%_top] md:object-center opacity-30 md:opacity-100"
         priority
+        sizes="100vw"
       />
 
-      {/* Subtle bottom gradient for button readability */}
+      {/* Mobile gradient: transparent top → dark bottom for text readability */}
       <div
-        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
+        className="absolute inset-0 pointer-events-none md:hidden"
+        style={{
+          background:
+            "linear-gradient(to bottom, transparent 0%, transparent 35%, var(--bg-dark) 65%)",
+        }}
+      />
+
+      {/* Desktop gradient: subtle bottom fade for button readability */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none hidden md:block"
         style={{
           background:
             "linear-gradient(to top, var(--bg-dark) 0%, transparent 100%)",
@@ -35,7 +43,7 @@ export const Hero = () => {
       />
 
       {/* CTAs at bottom center */}
-      <div className="absolute inset-x-0 bottom-12 z-10 flex flex-col items-center">
+      <div className="absolute inset-x-0 bottom-12 z-10 flex flex-col items-center px-6 md:px-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +54,7 @@ export const Hero = () => {
               <Button
                 variant="primary"
                 href={COPY.hero.whatsappLink}
-                className="!px-10 !py-4 !text-base"
+                className="!px-10 !py-4 !text-base w-full md:w-auto"
               >
                 {COPY.hero.cta}
               </Button>
@@ -58,7 +66,7 @@ export const Hero = () => {
               <Button
                 variant="secondary"
                 href="#retreat"
-                className="!px-10 !py-4 !text-base"
+                className="!px-10 !py-4 !text-base w-full md:w-auto"
               >
                 {COPY.hero.retreatCta}
               </Button>
@@ -68,6 +76,6 @@ export const Hero = () => {
             </div>
           </motion.div>
       </div>
-    </Section>
+    </section>
   );
 };
