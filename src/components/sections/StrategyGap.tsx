@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";

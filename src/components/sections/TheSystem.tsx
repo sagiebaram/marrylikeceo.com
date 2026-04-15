@@ -1,3 +1,5 @@
+"use client";
+
 import { Target, DollarSign, Search, Heart } from "lucide-react";
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
