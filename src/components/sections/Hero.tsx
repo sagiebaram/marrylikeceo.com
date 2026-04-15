@@ -9,14 +9,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { COPY } from "@/constants/copy";
 
-const STAGGER = 0.2;
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
-
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 1, delay, ease: EASE },
-});
 
 export const Hero = () => {
   const [mounted, setMounted] = useState(false);
@@ -31,68 +24,49 @@ export const Hero = () => {
       id="hero"
       className="!min-h-screen relative overflow-hidden !px-0 !py-0 lg:!px-0 lg:!py-0"
     >
-      {/* Background image */}
+      {/* Background image — no overlay, full clarity */}
       <Image
         src="/images/hero.jpg"
-        alt=""
+        alt="Marry Like a CEO"
         fill
         className="object-cover object-center"
         priority
       />
 
-      {/* Gradient overlay */}
+      {/* Subtle bottom gradient for button readability */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, transparent 0%, var(--bg-dark) 85%)",
+            "linear-gradient(to top, var(--bg-dark) 0%, transparent 100%)",
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 flex min-h-screen items-center px-6 md:px-12">
-        <div className="mx-auto w-full max-w-6xl">
-          <div className="md:ml-auto md:mr-[10%] md:max-w-xl text-center md:text-left">
-            {mounted && (
-              <>
-                <motion.div {...fadeUp(0)}>
-                  <Eyebrow color="gold">{COPY.hero.eyebrow}</Eyebrow>
-                </motion.div>
-
-                <motion.h1
-                  {...fadeUp(STAGGER)}
-                  className="mt-6 font-[family-name:var(--font-cormorant-garamond)] font-light text-[clamp(36px,5.5vw,64px)] leading-tight text-[var(--text-light)]"
-                >
-                  {COPY.hero.headline}
-                  <br />
-                  <span className="italic text-[var(--gold)]">
-                    {COPY.hero.headlineAccent}
-                  </span>
-                </motion.h1>
-
-                <motion.p
-                  {...fadeUp(STAGGER * 2)}
-                  className="mt-6 max-w-lg font-[family-name:var(--font-dm-sans)] font-light text-lg text-[var(--text-secondary)] md:mx-0 mx-auto"
-                >
-                  {COPY.hero.subhead}
-                </motion.p>
-
-                <motion.div {...fadeUp(STAGGER * 3)} className="mt-8">
-                  <Button variant="primary" href="#retreat">
-                    {COPY.hero.cta}
-                  </Button>
-                  <p className="mt-3 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-                    {COPY.hero.micro}
-                  </p>
-                </motion.div>
-              </>
-            )}
-          </div>
-        </div>
+      {/* CTA at bottom center */}
+      <div className="absolute inset-x-0 bottom-16 z-10 flex flex-col items-center gap-4">
+        {mounted && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease: EASE }}
+            className="flex flex-col items-center gap-3"
+          >
+            <Button
+              variant="primary"
+              href={COPY.hero.whatsappLink}
+              className="!px-10 !py-4 !text-base"
+            >
+              {COPY.hero.cta}
+            </Button>
+            <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+              {COPY.hero.micro}
+            </p>
+          </motion.div>
+        )}
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-40">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 opacity-40">
         <Eyebrow color="gold" className="!text-[10px]">
           {COPY.hero.scrollLabel}
         </Eyebrow>

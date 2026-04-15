@@ -9,13 +9,9 @@ export const COPY = {
     ],
   },
   hero: {
-    eyebrow: "The Marriage Strategist",
-    headline: "You've built an extraordinary life.",
-    headlineAccent: "Now build the relationship to match.",
-    subhead:
-      "A proven system that applies business strategy to finding — and choosing — the right partner.",
-    cta: "Join the Waitlist",
-    micro: "Be first to know when the retreat + book launch in July.",
+    cta: "Join the Community",
+    micro: "Free WhatsApp group for ambitious women.",
+    whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
     scrollLabel: "Scroll",
   },
   strategyGap: {
