@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -18,9 +20,30 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Marry Like a CEO | Strategic Coaching for Ambitious Women",
+  metadataBase: new URL("https://marrylikeceo.com"),
+  title: "Marry Like a CEO — A Roadmap to Marriage for Ambitious Women",
   description:
-    "Apply business frameworks to your relationship strategy. Premium coaching for ambitious women who refuse to leave love to chance.",
+    "A proven system that applies business strategy to finding — and choosing — the right partner. Join the waitlist for the July 2026 retreat and book launch.",
+  keywords: [
+    "marriage strategy",
+    "ambitious women",
+    "relationship coaching",
+    "marry like a ceo",
+    "dating for professionals",
+  ],
+  authors: [{ name: "Marry Like a CEO" }],
+  openGraph: {
+    title: "Marry Like a CEO",
+    description: "Business frameworks. Applied to love. Join the waitlist.",
+    images: ["/images/hero.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marry Like a CEO",
+    description: "Business frameworks. Applied to love.",
+    images: ["/images/hero.jpg"],
+  },
 };
 
 const RootLayout = ({
@@ -33,7 +56,11 @@ const RootLayout = ({
       lang="en"
       className={`${cormorantGaramond.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 };

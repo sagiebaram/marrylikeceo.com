@@ -80,8 +80,9 @@ export const Retreat = () => {
             </h3>
 
             <EmailCapture
-              source="hero"
+              source="retreat"
               variant="inline"
+              theme="light"
               showName={true}
               ctaText={retreat.form.cta}
               className="mt-6 flex-col! items-stretch!"
