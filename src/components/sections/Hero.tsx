@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
@@ -10,11 +9,6 @@ import { COPY } from "@/constants/copy";
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 
 export const Hero = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <Section
@@ -42,7 +36,6 @@ export const Hero = () => {
 
       {/* CTAs at bottom center */}
       <div className="absolute inset-x-0 bottom-12 z-10 flex flex-col items-center">
-        {mounted && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +67,6 @@ export const Hero = () => {
               </p>
             </div>
           </motion.div>
-        )}
       </div>
     </Section>
   );
