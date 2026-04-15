@@ -14,15 +14,16 @@ export const Hero = () => {
     <Section
       theme="dark"
       id="hero"
-      className="!min-h-screen relative overflow-hidden !px-0 !py-0 lg:!px-0 lg:!py-0"
+      className="!min-h-[75svh] md:!min-h-screen relative overflow-hidden !px-0 !py-0 lg:!px-0 lg:!py-0"
     >
       {/* Background image — no overlay, full clarity */}
       <Image
         src="/images/hero.jpg"
         alt="Marry Like a CEO"
         fill
-        className="object-cover object-center"
+        className="object-cover object-[center_30%] md:object-center"
         priority
+        sizes="100vw"
       />
 
       {/* Subtle bottom gradient for button readability */}
