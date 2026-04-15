@@ -33,7 +33,7 @@ export const Navbar = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 z-50 flex h-[72px] w-full items-center justify-between px-6 md:px-12 transition-all duration-400",
+          "fixed top-0 left-0 z-50 flex h-16 md:h-[72px] w-full items-center justify-between gap-4 px-4 md:px-12 transition-all duration-400",
           scrolled
             ? "bg-[var(--bg-dark)]/95 backdrop-blur-lg border-b border-[var(--divider-dark)]"
             : "bg-transparent border-b border-transparent",
