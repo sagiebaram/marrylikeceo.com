@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { COPY } from "@/constants/copy";
 
@@ -11,10 +10,9 @@ const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 export const Hero = () => {
 
   return (
-    <Section
-      theme="dark"
+    <section
       id="hero"
-      className="!min-h-[75svh] md:!min-h-screen relative overflow-hidden !px-0 !py-0 lg:!px-0 lg:!py-0"
+      className="relative min-h-[75svh] md:min-h-screen overflow-hidden bg-[var(--bg-dark)] text-[var(--text-light)]"
     >
       {/* Background image — dimmed on mobile, full clarity on desktop */}
       <Image
@@ -78,6 +76,6 @@ export const Hero = () => {
             </div>
           </motion.div>
       </div>
-    </Section>
+    </section>
   );
 };
