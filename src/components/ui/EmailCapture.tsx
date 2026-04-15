@@ -10,8 +10,9 @@ import { useState } from "react";
 import type { ApiResponse } from "@/types";
 
 interface EmailCaptureProps {
-  readonly source: "hero" | "book" | "final";
+  readonly source: "hero" | "retreat" | "book" | "final";
   readonly variant?: "inline" | "card";
+  readonly theme?: "dark" | "light";
   readonly showName?: boolean;
   readonly ctaText?: string;
   readonly className?: string;
@@ -20,6 +21,7 @@ interface EmailCaptureProps {
 export const EmailCapture = ({
   source,
   variant = "inline",
+  theme = "dark",
   showName = false,
   ctaText = "Get the Strategy",
   className,
@@ -94,6 +96,7 @@ export const EmailCapture = ({
           <FormField
             label="First name"
             placeholder="First name"
+            variant={theme}
             registration={register("firstName")}
             error={errors.firstName?.message}
           />
@@ -105,6 +108,7 @@ export const EmailCapture = ({
           label="Email"
           type="email"
           placeholder="Your email"
+          variant={theme}
           registration={register("email")}
           error={errors.email?.message}
         />

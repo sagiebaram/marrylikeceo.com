@@ -1,5 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { StrategyGap } from "@/components/sections/StrategyGap";
 import { TheSystem } from "@/components/sections/TheSystem";
@@ -12,7 +10,6 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 const HomePage = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <StrategyGap />
       <TheSystem />
@@ -21,7 +18,6 @@ const HomePage = () => {
       <Book />
       <Community />
       <FinalCTA />
-      <Footer />
     </>
   );
 };
