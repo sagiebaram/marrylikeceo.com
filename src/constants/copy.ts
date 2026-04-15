@@ -10,9 +10,8 @@ export const COPY = {
   },
   hero: {
     cta: "Join the Community",
-    micro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
-    scrollLabel: "Scroll",
+    retreatCta: "Join the Retreat Waitlist",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",
