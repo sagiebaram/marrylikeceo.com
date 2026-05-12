@@ -6,6 +6,7 @@ export const COPY = {
       { label: "Experience", href: "#experience" },
       { label: "Book", href: "#book" },
       { label: "Community", href: "#community" },
+      { label: "FAQ", href: "#faq" },
     ],
   },
   hero: {
