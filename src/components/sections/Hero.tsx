@@ -19,7 +19,7 @@ export const Hero = () => {
         src="/images/hero.jpg"
         alt="Marry Like a CEO"
         fill
-        className="object-cover object-[70%_top] md:object-center opacity-30 md:opacity-100"
+        className="object-cover object-[50%_top] md:object-center opacity-30 md:opacity-100"
         priority
         sizes="100vw"
       />
