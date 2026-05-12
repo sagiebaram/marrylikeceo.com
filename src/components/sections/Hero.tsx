@@ -65,13 +65,13 @@ export const Hero = () => {
             <div className="flex flex-col items-center gap-2">
               <Button
                 variant="secondary"
-                href="#retreat"
+                href="#experience"
                 className="!px-10 !py-4 !text-base w-full md:w-auto"
               >
-                {COPY.hero.retreatCta}
+                {COPY.hero.experienceCta}
               </Button>
               <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-                {COPY.hero.retreatMicro}
+                {COPY.hero.experienceMicro}
               </p>
             </div>
           </motion.div>

@@ -12,9 +12,9 @@ const getNotion = () => {
 
 const sourceMap: Record<string, string> = {
   hero: "Community",
-  retreat: "Retreat",
+  experience: "Experience",
   book: "Book",
-  final: "Retreat",
+  final: "Experience",
 };
 
 export const addSubscriber = async (

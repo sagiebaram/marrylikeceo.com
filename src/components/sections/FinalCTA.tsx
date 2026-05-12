@@ -49,7 +49,7 @@ export const FinalCTA = () => {
         </motion.p>
 
         <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }} className="mt-10">
-          <Button variant="primary" href="#retreat">
+          <Button variant="primary" href="#experience">
             {finalCta.cta}
           </Button>
         </motion.div>
