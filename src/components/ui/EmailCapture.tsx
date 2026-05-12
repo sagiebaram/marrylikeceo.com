@@ -10,7 +10,7 @@ import { useState } from "react";
 import type { ApiResponse } from "@/types";
 
 interface EmailCaptureProps {
-  readonly source: "hero" | "retreat" | "book" | "final";
+  readonly source: "hero" | "experience" | "book" | "final";
   readonly variant?: "inline" | "card";
   readonly theme?: "dark" | "light";
   readonly showName?: boolean;

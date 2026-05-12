@@ -3,17 +3,18 @@ export const COPY = {
     links: [
       { label: "The System", href: "#the-system" },
       { label: "About", href: "#story" },
-      { label: "Retreat", href: "#retreat" },
+      { label: "Experience", href: "#experience" },
       { label: "Book", href: "#book" },
       { label: "Community", href: "#community" },
+      { label: "FAQ", href: "#faq" },
     ],
   },
   hero: {
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
-    retreatCta: "Join the Retreat Waitlist",
-    retreatMicro: "Be first to know when the retreat + book launch in July.",
+    experienceCta: "Join an Experience",
+    experienceMicro: "Be first to know when the Experience + book launch in July.",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",
@@ -74,9 +75,9 @@ export const COPY = {
     beat: "Then her marriage ended.",
     closing: "Now she teaches the method.",
   },
-  retreat: {
+  experience: {
     eyebrow: "July 2026",
-    headline: "The Retreat.",
+    headline: "The Experience.",
     headlineAccent: "3 Days That Change Everything.",
     body: "A 3-day intensive for ambitious women who are done leaving their love life to chance. You\u2019ll learn the system. You\u2019ll build your strategy. You\u2019ll leave with a roadmap \u2014 not a mood board.",
     details: [
@@ -88,7 +89,7 @@ export const COPY = {
     micro: "Location and pricing announced to the waitlist first.",
     form: {
       headline: "Be the first to know.",
-      cta: "Join the Retreat Waitlist \u2192",
+      cta: "Join an Experience \u2192",
       privacy: "No spam. Unsubscribe anytime.",
     },
   },
@@ -145,7 +146,7 @@ export const COPY = {
     links: [
       { label: "About", href: "#story" },
       { label: "The System", href: "#the-system" },
-      { label: "The Retreat", href: "#retreat" },
+      { label: "The Experience", href: "#experience" },
       { label: "The Book", href: "#book" },
       { label: "Community", href: "#community" },
     ],

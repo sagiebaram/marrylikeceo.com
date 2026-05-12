@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "motion/react";
 
 import { Section } from "@/components/ui/Section";
@@ -14,16 +15,22 @@ const fadeUp = {
   transition: { duration: 0.6 },
 };
 
-export const Retreat = () => {
-  const { retreat } = COPY;
+export const Experience = () => {
+  const { experience } = COPY;
+
+  useEffect(() => {
+    if (window.location.hash === "#retreat") {
+      history.replaceState(null, "", "#experience");
+    }
+  }, []);
 
   return (
-    <Section theme="ivory" id="retreat">
+    <Section theme="ivory" id="experience">
       <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
         {/* Left column */}
         <div className="min-w-[280px] flex-1">
           <motion.div {...fadeUp}>
-            <Eyebrow color="crimson">{retreat.eyebrow}</Eyebrow>
+            <Eyebrow color="crimson">{experience.eyebrow}</Eyebrow>
           </motion.div>
 
           <motion.h2
@@ -31,9 +38,9 @@ export const Retreat = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-6 font-[family-name:var(--font-cormorant-garamond)] font-light text-[clamp(28px,3.5vw,42px)] text-[var(--text-dark)]"
           >
-            {retreat.headline}
+            {experience.headline}
             <br />
-            <em>{retreat.headlineAccent}</em>
+            <em>{experience.headlineAccent}</em>
           </motion.h2>
 
           <motion.p
@@ -41,7 +48,7 @@ export const Retreat = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 font-[family-name:var(--font-dm-sans)] font-light text-[17px] text-[#555]"
           >
-            {retreat.body}
+            {experience.body}
           </motion.p>
 
           <motion.ul
@@ -49,7 +56,7 @@ export const Retreat = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-8 flex flex-col gap-4"
           >
-            {retreat.details.map((detail) => (
+            {experience.details.map((detail) => (
               <li key={detail} className="flex items-start gap-3">
                 <span className="text-[var(--crimson)]">&rarr;</span>
                 <span className="font-[family-name:var(--font-dm-sans)] text-[15px] text-[var(--text-dark)]">
@@ -64,7 +71,7 @@ export const Retreat = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-6 font-[family-name:var(--font-dm-sans)] text-sm italic text-[var(--text-secondary)]"
           >
-            {retreat.micro}
+            {experience.micro}
           </motion.p>
         </div>
 
@@ -76,20 +83,20 @@ export const Retreat = () => {
         >
           <div className="rounded-sm border border-[var(--divider-light)] bg-white p-11 shadow-lg shadow-black/5">
             <h3 className="mb-2 font-[family-name:var(--font-cormorant-garamond)] text-2xl font-light text-[var(--text-dark)]">
-              {retreat.form.headline}
+              {experience.form.headline}
             </h3>
 
             <EmailCapture
-              source="retreat"
+              source="experience"
               variant="inline"
               theme="light"
               showName={true}
-              ctaText={retreat.form.cta}
+              ctaText={experience.form.cta}
               className="mt-6 flex-col! items-stretch!"
             />
 
             <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-              {retreat.form.privacy}
+              {experience.form.privacy}
             </p>
           </div>
         </motion.div>
