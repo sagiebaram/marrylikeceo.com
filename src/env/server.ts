@@ -3,8 +3,8 @@ import { z } from "zod";
 const serverEnvSchema = z.object({
   NOTION_TOKEN: z.string().min(1),
   NOTION_SUBSCRIBERS_DB_ID: z.string().min(1),
-  ALLOWED_ORIGINS: z.string().min(1),
-  NODE_ENV: z.enum(["development", "production", "test"]),
+  ALLOWED_ORIGINS: z.string().default("https://marrylikeceo.com"),
+  NODE_ENV: z.enum(["development", "production", "test"]).default("production"),
   RESEND_API_KEY: z.string().optional(),
 });
 
