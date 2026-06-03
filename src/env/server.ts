@@ -3,7 +3,7 @@ import { z } from "zod";
 const serverEnvSchema = z.object({
   NOTION_TOKEN: z.string().min(1),
   NOTION_SUBSCRIBERS_DB_ID: z.string().min(1),
-  ALLOWED_ORIGINS: z.string().default("https://marrylikeceo.com"),
+  ALLOWED_ORIGINS: z.string().default("https://marrylikeceo.com,https://www.marrylikeceo.com,https://marrylikeceocom.vercel.app"),
   NODE_ENV: z.enum(["development", "production", "test"]).default("production"),
   RESEND_API_KEY: z.string().optional(),
 });
