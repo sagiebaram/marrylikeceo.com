@@ -18,6 +18,7 @@ interface EmailCaptureProps {
   readonly className?: string;
   readonly fieldClassName?: string;
   readonly buttonClassName?: string;
+  readonly buttonVariant?: "primary" | "secondary" | "ghost";
 }
 
 export const EmailCapture = ({
@@ -29,6 +30,7 @@ export const EmailCapture = ({
   className,
   fieldClassName,
   buttonClassName,
+  buttonVariant = "primary",
 }: EmailCaptureProps) => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [serverMessage, setServerMessage] = useState("");
@@ -125,7 +127,7 @@ export const EmailCapture = ({
 
       <Button
         type="submit"
-        variant="primary"
+        variant={buttonVariant}
         disabled={status === "loading"}
         className={cn(variant === "card" && "mt-2 w-full", buttonClassName)}
       >

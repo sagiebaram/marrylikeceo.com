@@ -13,8 +13,8 @@ export const COPY = {
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
-    emailCta: "Join the List",
-    emailMicro: "Get notified — new Experiences, the book, and what’s next.",
+    emailCta: "Subscribe",
+    emailMicro: "Get the newsletter — new Experiences, the book, and what’s next.",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",
@@ -137,8 +137,8 @@ export const COPY = {
     headline: "Your standards aren\u2019t too high.",
     headlineAccent: "Your strategy is too vague.",
     subhead: "Let\u2019s fix that.",
-    cta: "Join the List",
-    micro: "Get notified \u2014 new Experiences, the book, and what\u2019s next.",
+    cta: "Subscribe",
+    micro: "Get the newsletter \u2014 new Experiences, the book, and what\u2019s next.",
     hashtag: "#IChooseHim",
   },
   footer: {

@@ -68,6 +68,7 @@ export const Hero = () => {
                 source="hero"
                 variant="inline"
                 ctaText={COPY.hero.emailCta}
+                buttonVariant="secondary"
                 className="w-full"
                 fieldClassName="rounded-[2px] border px-4 py-4 bg-[var(--bg-dark)]/40"
                 buttonClassName="!px-8 !py-4 !text-base whitespace-nowrap w-full sm:w-auto"

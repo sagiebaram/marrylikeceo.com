@@ -53,7 +53,12 @@ export const FinalCTA = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mx-auto mt-10 max-w-[440px]"
         >
-          <EmailCapture source="final" variant="inline" ctaText={finalCta.cta} />
+          <EmailCapture
+            source="final"
+            variant="inline"
+            ctaText={finalCta.cta}
+            buttonVariant="secondary"
+          />
           <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
             {finalCta.micro}
           </p>
