@@ -13,8 +13,8 @@ export const COPY = {
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
-    experienceCta: "Join an Experience",
-    experienceMicro: "Be first to know when the Experience + book launch in July.",
+    emailCta: "Join the List",
+    emailMicro: "Get notified — new Experiences, the book, and what’s next.",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",

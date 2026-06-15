@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
+import { EmailCapture } from "@/components/ui/EmailCapture";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
@@ -62,16 +63,15 @@ export const Hero = () => {
                 {COPY.hero.ctaMicro}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <Button
-                variant="secondary"
-                href="#experience"
-                className="!px-10 !py-4 !text-base w-full md:w-auto"
-              >
-                {COPY.hero.experienceCta}
-              </Button>
+            <div className="flex w-full flex-col items-center gap-2 sm:w-[360px]">
+              <EmailCapture
+                source="hero"
+                variant="inline"
+                ctaText={COPY.hero.emailCta}
+                className="w-full"
+              />
               <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-                {COPY.hero.experienceMicro}
+                {COPY.hero.emailMicro}
               </p>
             </div>
           </motion.div>
