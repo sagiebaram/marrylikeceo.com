@@ -8,6 +8,7 @@ interface FormFieldProps {
   readonly variant?: "light" | "dark";
   readonly error?: string;
   readonly registration: UseFormRegisterReturn;
+  readonly inputClassName?: string;
 }
 
 export const FormField = ({
@@ -17,6 +18,7 @@ export const FormField = ({
   variant = "dark",
   error,
   registration,
+  inputClassName,
 }: FormFieldProps) => {
   return (
     <div className="flex flex-col gap-1.5">
@@ -35,6 +37,7 @@ export const FormField = ({
           variant === "dark"
             ? "border-[var(--divider-dark)] text-[var(--text-light)] focus:border-[var(--gold)]"
             : "border-[var(--divider-light)] text-[var(--text-dark)] focus:border-[var(--crimson)]",
+          inputClassName,
         )}
         {...registration}
       />

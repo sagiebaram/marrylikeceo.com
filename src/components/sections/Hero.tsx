@@ -51,11 +51,11 @@ export const Hero = () => {
             transition={{ duration: 1, delay: 0.5, ease: EASE }}
             className="flex flex-col sm:flex-row items-center gap-8"
           >
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex w-full flex-col items-center gap-2 sm:w-auto">
               <Button
                 variant="primary"
                 href={COPY.hero.whatsappLink}
-                className="!px-10 !py-4 !text-base w-full md:w-auto"
+                className="!px-8 !py-4 !text-base w-full sm:w-auto"
               >
                 {COPY.hero.cta}
               </Button>
@@ -63,12 +63,14 @@ export const Hero = () => {
                 {COPY.hero.ctaMicro}
               </p>
             </div>
-            <div className="flex w-full flex-col items-center gap-2 sm:w-[360px]">
+            <div className="flex w-full flex-col items-center gap-2 sm:w-[420px]">
               <EmailCapture
                 source="hero"
                 variant="inline"
                 ctaText={COPY.hero.emailCta}
                 className="w-full"
+                fieldClassName="rounded-[2px] border px-4 py-4 bg-[var(--bg-dark)]/40"
+                buttonClassName="!px-8 !py-4 !text-base whitespace-nowrap w-full sm:w-auto"
               />
               <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
                 {COPY.hero.emailMicro}

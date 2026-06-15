@@ -16,6 +16,8 @@ interface EmailCaptureProps {
   readonly showName?: boolean;
   readonly ctaText?: string;
   readonly className?: string;
+  readonly fieldClassName?: string;
+  readonly buttonClassName?: string;
 }
 
 export const EmailCapture = ({
@@ -25,6 +27,8 @@ export const EmailCapture = ({
   showName = false,
   ctaText = "Get the Strategy",
   className,
+  fieldClassName,
+  buttonClassName,
 }: EmailCaptureProps) => {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [serverMessage, setServerMessage] = useState("");
@@ -99,6 +103,7 @@ export const EmailCapture = ({
             variant={theme}
             registration={register("firstName")}
             error={errors.firstName?.message}
+            inputClassName={fieldClassName}
           />
         </div>
       )}
@@ -111,6 +116,7 @@ export const EmailCapture = ({
           variant={theme}
           registration={register("email")}
           error={errors.email?.message}
+          inputClassName={fieldClassName}
         />
       </div>
 
@@ -121,7 +127,7 @@ export const EmailCapture = ({
         type="submit"
         variant="primary"
         disabled={status === "loading"}
-        className={cn(variant === "card" && "mt-2 w-full")}
+        className={cn(variant === "card" && "mt-2 w-full", buttonClassName)}
       >
         {status === "loading" ? "Sending..." : ctaText}
       </Button>
