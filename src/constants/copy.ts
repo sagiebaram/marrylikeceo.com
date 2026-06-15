@@ -137,7 +137,8 @@ export const COPY = {
     headline: "Your standards aren\u2019t too high.",
     headlineAccent: "Your strategy is too vague.",
     subhead: "Let\u2019s fix that.",
-    cta: "Join the Waitlist",
+    cta: "Join the List",
+    micro: "Get notified \u2014 new Experiences, the book, and what\u2019s next.",
     hashtag: "#IChooseHim",
   },
   footer: {
