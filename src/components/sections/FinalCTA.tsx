@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 import { Section } from "@/components/ui/Section";
-import { Button } from "@/components/ui/Button";
+import { EmailCapture } from "@/components/ui/EmailCapture";
 import { COPY } from "@/constants/copy";
 
 const fadeUp = {
@@ -48,10 +48,20 @@ export const FinalCTA = () => {
           {finalCta.subhead}
         </motion.p>
 
-        <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }} className="mt-10">
-          <Button variant="primary" href="#experience">
-            {finalCta.cta}
-          </Button>
+        <motion.div
+          {...fadeUp}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mx-auto mt-10 max-w-[440px]"
+        >
+          <EmailCapture
+            source="final"
+            variant="inline"
+            ctaText={finalCta.cta}
+            buttonVariant="secondary"
+          />
+          <p className="mt-4 font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+            {finalCta.micro}
+          </p>
         </motion.div>
 
         <motion.p

@@ -13,8 +13,8 @@ export const COPY = {
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
-    experienceCta: "Join an Experience",
-    experienceMicro: "Be first to know when the Experience + book launch in July.",
+    emailCta: "Subscribe",
+    emailMicro: "Get the newsletter — new Experiences, the book, and what’s next.",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",
@@ -76,22 +76,23 @@ export const COPY = {
     closing: "Now she teaches the method.",
   },
   experience: {
-    eyebrow: "July 2026",
-    headline: "The Experience.",
-    headlineAccent: "3 Days That Change Everything.",
-    body: "A 3-day intensive for ambitious women who are done leaving their love life to chance. You\u2019ll learn the system. You\u2019ll build your strategy. You\u2019ll leave with a roadmap \u2014 not a mood board.",
+    eyebrow: "The Experience",
+    headline: "Every month, a new entry point.",
+    headlineAccent:
+      "You don\u2019t need to start at the beginning. You just need to start.",
+    body: "Marry Like a CEO is a roadmap \u2014 with stages, milestones, and a destination. Each monthly Experience is a live virtual event with Ariel: a different topic, a different angle, a different moment in the journey. You can join at any point. Every session stands alone \u2014 and every session is part of something larger. The more you show up, the clearer the map becomes.",
     details: [
-      "3 days, small group, high-touch",
-      "Ariel\u2019s complete methodology, live",
-      "Your personal marriage strategy, built with her",
-      "Community of women who think like you do",
+      "Live virtual event with Ariel, every month",
+      "A different topic each time \u2014 enter wherever it resonates",
+      "Ask Ariel anything \u2014 every session includes open Q&A",
+      "Open to all \u2014 no prerequisites, no starting over",
+      "12 Experiences planned this year",
     ],
-    micro: "Location and pricing announced to the waitlist first.",
-    form: {
-      headline: "Be the first to know.",
-      cta: "Join an Experience \u2192",
-      privacy: "No spam. Unsubscribe anytime.",
-    },
+    closing:
+      "Every Experience is a fraction of the journey. The journey is what changes everything.",
+    cta: "See All Upcoming Experiences \u2192",
+    ctaHref: "https://luma.com/marrylikeceo",
+    micro: "Free to join. Dates and topics released on the calendar first.",
   },
   book: {
     eyebrow: "Coming July 2026",
@@ -136,7 +137,8 @@ export const COPY = {
     headline: "Your standards aren\u2019t too high.",
     headlineAccent: "Your strategy is too vague.",
     subhead: "Let\u2019s fix that.",
-    cta: "Join the Waitlist",
+    cta: "Subscribe",
+    micro: "Get the newsletter \u2014 new Experiences, the book, and what\u2019s next.",
     hashtag: "#IChooseHim",
   },
   footer: {

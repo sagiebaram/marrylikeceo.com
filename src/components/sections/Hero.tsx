@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
+import { EmailCapture } from "@/components/ui/EmailCapture";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
@@ -50,11 +51,11 @@ export const Hero = () => {
             transition={{ duration: 1, delay: 0.5, ease: EASE }}
             className="flex flex-col sm:flex-row items-center gap-8"
           >
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex w-full flex-col items-center gap-2 sm:w-auto">
               <Button
                 variant="primary"
                 href={COPY.hero.whatsappLink}
-                className="!px-10 !py-4 !text-base w-full md:w-auto"
+                className="!px-8 !py-4 !text-base w-full sm:w-auto"
               >
                 {COPY.hero.cta}
               </Button>
@@ -62,16 +63,18 @@ export const Hero = () => {
                 {COPY.hero.ctaMicro}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2">
-              <Button
-                variant="secondary"
-                href="#experience"
-                className="!px-10 !py-4 !text-base w-full md:w-auto"
-              >
-                {COPY.hero.experienceCta}
-              </Button>
+            <div className="flex w-full flex-col items-center gap-2 sm:w-[420px]">
+              <EmailCapture
+                source="hero"
+                variant="inline"
+                ctaText={COPY.hero.emailCta}
+                buttonVariant="secondary"
+                className="w-full"
+                fieldClassName="rounded-[2px] border px-4 py-4 bg-[var(--bg-dark)]/40"
+                buttonClassName="!px-8 !py-4 !text-base whitespace-nowrap w-full sm:w-auto"
+              />
               <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-                {COPY.hero.experienceMicro}
+                {COPY.hero.emailMicro}
               </p>
             </div>
           </motion.div>

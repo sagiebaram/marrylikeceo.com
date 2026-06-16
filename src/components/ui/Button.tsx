@@ -8,6 +8,7 @@ interface ButtonProps {
   readonly onClick?: () => void;
   readonly className?: string;
   readonly href?: string;
+  readonly target?: "_blank" | "_self";
   readonly type?: "button" | "submit";
   readonly disabled?: boolean;
 }
@@ -27,6 +28,7 @@ export const Button = ({
   onClick,
   className,
   href,
+  target,
   type = "button",
   disabled,
 }: ButtonProps) => {
@@ -38,7 +40,12 @@ export const Button = ({
 
   if (href) {
     return (
-      <a href={href} className={styles}>
+      <a
+        href={href}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        className={styles}
+      >
         {children}
       </a>
     );
