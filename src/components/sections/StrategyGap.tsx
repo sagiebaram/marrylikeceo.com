@@ -41,12 +41,23 @@ export const StrategyGap = () => (
         {COPY.strategyGap.paragraphs[0]}
       </motion.p>
 
-      <motion.p
-        {...fadeUp(0.32)}
-        className="font-[family-name:var(--font-dm-sans)] font-light text-[17px] leading-relaxed text-[#555] md:col-span-4 md:col-start-8 md:mt-16"
-      >
-        {COPY.strategyGap.paragraphs[1]}
-      </motion.p>
+      <div className="md:col-span-4 md:col-start-8">
+        <motion.p
+          {...fadeUp(0.32)}
+          className="font-[family-name:var(--font-dm-sans)] font-light text-[17px] leading-relaxed text-[#555]"
+        >
+          {COPY.strategyGap.paragraphs[1]}
+        </motion.p>
+
+        <motion.p
+          {...fadeUp(0.45)}
+          className="mt-8 text-right font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,3.2vw,36px)] font-light leading-snug text-[var(--text-dark)]"
+        >
+          {COPY.strategyGap.closingBold}
+          <br />
+          <em className="text-[var(--gold)]">{COPY.strategyGap.closingAccent}</em>
+        </motion.p>
+      </div>
 
       {/* Hand-drawn heel illustration filling the open left column */}
       <motion.div
@@ -67,14 +78,5 @@ export const StrategyGap = () => (
         />
       </motion.div>
     </div>
-
-    <motion.p
-      {...fadeUp(0.45)}
-      className="mt-6 text-right font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,3.2vw,36px)] font-light leading-snug text-[var(--text-dark)] lg:mt-8"
-    >
-      {COPY.strategyGap.closingBold}
-      <br />
-      <em className="text-[var(--gold)]">{COPY.strategyGap.closingAccent}</em>
-    </motion.p>
   </Section>
 );
