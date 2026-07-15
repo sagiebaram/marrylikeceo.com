@@ -19,7 +19,7 @@ export const COPY = {
       "A proven system that applies business strategy to finding - and choosing - the right partner, by choosing yourself.",
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
-    whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
+    whatsappLink: "https://chat.whatsapp.com/EkhW9OXTlGk668NwwcHzXc?mode=gi_t",
     experienceCta: "Join an Experience",
     experienceMicro: "Free to join - a new topic every month.",
     imageAlt:
