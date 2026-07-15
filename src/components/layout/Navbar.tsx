@@ -55,7 +55,8 @@ export const Navbar = () => {
           ))}
           <Button
             variant="secondary"
-            onClick={() => handleNav(COPY.nav.ctaHref)}
+            href={COPY.nav.ctaHref}
+            target="_blank"
             className="!px-6 !py-2.5 !text-xs uppercase tracking-[0.15em]"
           >
             {COPY.nav.cta}
@@ -94,7 +95,9 @@ export const Navbar = () => {
           <div className="mt-4 w-full max-w-[280px]">
             <Button
               variant="primary"
-              onClick={() => handleNav(COPY.nav.ctaHref)}
+              href={COPY.nav.ctaHref}
+              target="_blank"
+              onClick={() => setMobileOpen(false)}
               className="w-full !py-4"
             >
               {COPY.nav.cta}

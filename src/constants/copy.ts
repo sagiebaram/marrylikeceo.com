@@ -8,8 +8,8 @@ export const COPY = {
       { label: "Community", href: "#community" },
       { label: "FAQ", href: "#faq" },
     ],
-    cta: "Join an Experience",
-    ctaHref: "#experience",
+    cta: "Event Calendar",
+    ctaHref: "https://luma.com/marrylikeceo",
   },
   hero: {
     eyebrow: "A Roadmap to Marriage for Ambitious Women, by Ariel Yankelewitz",

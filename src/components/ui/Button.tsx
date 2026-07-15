@@ -44,6 +44,7 @@ export const Button = ({
         href={href}
         target={target}
         rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        onClick={onClick}
         className={styles}
       >
         {children}

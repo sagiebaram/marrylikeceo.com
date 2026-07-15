@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { SystemIcon } from "@/components/ui/SystemIcon";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -62,9 +63,12 @@ export const TheSystem = () => (
               className="group border-t border-[var(--divider-light)] py-10 transition-all duration-500 first:border-t-0 first:pt-0 hover:pl-4 lg:py-12"
             >
               <div className="flex items-start gap-7 lg:gap-10">
-                <span className="font-[family-name:var(--font-cormorant-garamond)] text-[clamp(44px,4.5vw,64px)] font-light leading-[0.9] text-[var(--gold)] transition-colors duration-500">
-                  {card.step}
-                </span>
+                <div className="w-16 flex-none transition-transform duration-500 group-hover:scale-105 lg:w-[72px]">
+                  <SystemIcon
+                    index={Math.min(i, 3) as 0 | 1 | 2 | 3}
+                    delay={0.15 + i * 0.08}
+                  />
+                </div>
                 <div className="pt-1.5">
                   <h3 className="font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,2.4vw,32px)] font-normal leading-tight text-[var(--text-dark)]">
                     {card.title}
