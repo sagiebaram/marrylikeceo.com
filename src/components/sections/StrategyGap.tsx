@@ -41,31 +41,23 @@ export const StrategyGap = () => (
         {COPY.strategyGap.paragraphs[0]}
       </motion.p>
 
-      <div className="md:col-span-4 md:col-start-8">
-        <motion.p
-          {...fadeUp(0.32)}
-          className="font-[family-name:var(--font-dm-sans)] font-light text-[17px] leading-relaxed text-[#555]"
-        >
-          {COPY.strategyGap.paragraphs[1]}
-        </motion.p>
+      <motion.p
+        {...fadeUp(0.32)}
+        className="font-[family-name:var(--font-dm-sans)] font-light text-[17px] leading-relaxed text-[#555] md:col-span-4 md:col-start-8"
+      >
+        {COPY.strategyGap.paragraphs[1]}
+      </motion.p>
+    </div>
 
-        <motion.p
-          {...fadeUp(0.45)}
-          className="mt-8 text-right font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,3.2vw,36px)] font-light leading-snug text-[var(--text-dark)]"
-        >
-          {COPY.strategyGap.closingBold}
-          <br />
-          <em className="text-[var(--gold)]">{COPY.strategyGap.closingAccent}</em>
-        </motion.p>
-      </div>
-
-      {/* Hand-drawn heel illustration filling the open left column */}
+    {/* Illustration and closing line sit side by side as independent columns,
+        so the illustration's height doesn't dictate the gap before the text */}
+    <div className="mt-10 flex flex-col gap-10 md:flex-row md:items-start md:justify-between lg:mt-12">
       <motion.div
         initial={{ opacity: 0, y: 24, scale: 0.97 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto w-[200px] md:col-span-5 md:col-start-1 md:mx-0 md:-mt-2 md:w-full md:max-w-[300px] md:pl-2"
+        className="mx-auto w-[200px] md:mx-0 md:w-full md:max-w-[260px] md:pl-2"
         aria-hidden="true"
       >
         <Image
@@ -74,9 +66,18 @@ export const StrategyGap = () => (
           width={880}
           height={787}
           className="h-auto w-full"
-          sizes="(max-width: 768px) 240px, 380px"
+          sizes="(max-width: 768px) 240px, 260px"
         />
       </motion.div>
+
+      <motion.p
+        {...fadeUp(0.45)}
+        className="text-right font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,3.2vw,36px)] font-light leading-snug text-[var(--text-dark)]"
+      >
+        {COPY.strategyGap.closingBold}
+        <br />
+        <em className="text-[var(--gold)]">{COPY.strategyGap.closingAccent}</em>
+      </motion.p>
     </div>
   </Section>
 );

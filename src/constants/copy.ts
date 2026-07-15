@@ -12,11 +12,11 @@ export const COPY = {
     ctaHref: "#experience",
   },
   hero: {
-    eyebrow: "A Roadmap to Marriage for Ambitious Women",
+    eyebrow: "A Roadmap to Marriage for Ambitious Women, by Ariel Yankelewitz",
     headline: "Don’t fall in love.",
     headlineAccent: "Lead it.",
     subhead:
-      "A proven system that applies business strategy to finding — and choosing — the right partner.",
+      "A proven system that applies business strategy to finding — and choosing — the right partner, by choosing yourself.",
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
@@ -134,22 +134,27 @@ export const COPY = {
       {
         name: "Facebook",
         icon: "Users",
-        url: "https://www.facebook.com/groups/marrylikeceo",
+        url: "https://www.facebook.com/ariel.yankelewitz",
       },
       {
         name: "Instagram",
         icon: "Instagram",
-        url: "https://www.instagram.com/marrylikeceo/",
+        url: "https://www.instagram.com/arielyankelewitz/",
       },
       {
         name: "TikTok",
         icon: "Music2",
-        url: "https://www.tiktok.com/@marrylikeceo",
+        url: "https://www.tiktok.com/@arielyankelewitz1",
       },
       {
         name: "LinkedIn",
         icon: "Linkedin",
-        url: "https://www.linkedin.com/company/marry-like-ceo",
+        url: "https://www.linkedin.com/in/arielayankelewitz/",
+      },
+      {
+        name: "YouTube",
+        icon: "Youtube",
+        url: "https://www.youtube.com/@ArielYankelewitz",
       },
     ],
   },
@@ -180,19 +185,23 @@ export const COPY = {
       },
       {
         name: "Facebook",
-        url: "https://www.facebook.com/groups/marrylikeceo",
+        url: "https://www.facebook.com/ariel.yankelewitz",
       },
       {
         name: "Instagram",
-        url: "https://www.instagram.com/marrylikeceo/",
+        url: "https://www.instagram.com/arielyankelewitz/",
       },
       {
         name: "TikTok",
-        url: "https://www.tiktok.com/@marrylikeceo",
+        url: "https://www.tiktok.com/@arielyankelewitz1",
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/company/marry-like-ceo",
+        url: "https://www.linkedin.com/in/arielayankelewitz/",
+      },
+      {
+        name: "YouTube",
+        url: "https://www.youtube.com/@ArielYankelewitz",
       },
     ],
   },
