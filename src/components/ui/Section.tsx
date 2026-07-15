@@ -26,12 +26,12 @@ export const Section = ({
     <section
       id={id}
       className={cn(
-        "py-20 px-6 lg:py-[120px] lg:px-12",
+        "relative py-24 px-6 lg:py-[160px] lg:px-12 xl:py-[180px]",
         themeStyles[theme],
         className,
       )}
     >
-      <div className="mx-auto max-w-6xl">{children}</div>
+      <div className="relative mx-auto max-w-6xl">{children}</div>
     </section>
   );
 };

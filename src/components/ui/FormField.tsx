@@ -33,10 +33,10 @@ export const FormField = ({
         type={type}
         placeholder={placeholder ?? label}
         className={cn(
-          "w-full bg-transparent border-0 border-b px-0 py-3 text-sm font-[family-name:var(--font-dm-sans)] outline-none transition-colors duration-200 placeholder:text-[var(--text-secondary)]",
+          "w-full rounded-full border px-5 py-3.5 text-sm font-[family-name:var(--font-dm-sans)] outline-none transition-colors duration-200 placeholder:text-[var(--text-secondary)]",
           variant === "dark"
-            ? "border-[var(--divider-dark)] text-[var(--text-light)] focus:border-[var(--gold)]"
-            : "border-[var(--divider-light)] text-[var(--text-dark)] focus:border-[var(--crimson)]",
+            ? "border-[var(--divider-dark)] bg-white/[0.04] text-[var(--text-light)] focus:border-[var(--gold)]"
+            : "border-[var(--divider-light)] bg-white text-[var(--text-dark)] focus:border-[var(--crimson)]",
           inputClassName,
         )}
         {...registration}

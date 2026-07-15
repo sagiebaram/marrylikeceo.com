@@ -143,7 +143,8 @@ export const FAQ_DATA: readonly FAQCategory[] = [
       {
         question: 'What is an "Experience"?',
         answer: [
-          "Every Experience is a live virtual event with Ariel — a different topic, a different moment in the methodology, a different entry point into the journey. Marry Like a CEO is a roadmap. The Experiences are how you walk it. You don’t need to start at the beginning. You don’t need to have attended before. Each session stands alone — and each one is part of something larger. The more you show up, the clearer the map becomes. Twelve Experiences are planned this year. Join at the next one.",
+          "Every Experience is a live virtual event with Ariel — a different topic, a different moment in the methodology, a different entry point into the journey. Marry Like a CEO is a roadmap. The Experiences are how you walk it.",
+          "You don’t need to start at the beginning. You don’t need to have attended before. Each session stands alone — and each one is part of something larger. The more you show up, the clearer the map becomes. Twelve Experiences are planned this year. Join at the next one.",
         ],
         slug: "what-is-an-experience",
       },

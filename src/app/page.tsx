@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { StrategyGap } from "@/components/sections/StrategyGap";
 import { TheSystem } from "@/components/sections/TheSystem";
 import { Story } from "@/components/sections/Story";
+import { QuoteBand } from "@/components/sections/QuoteBand";
 import { Experience } from "@/components/sections/Experience";
 import { Book } from "@/components/sections/Book";
 import { Community } from "@/components/sections/Community";
@@ -17,6 +18,7 @@ const HomePage = () => {
       <StrategyGap />
       <TheSystem />
       <Story />
+      <QuoteBand />
       <Experience />
       <Book />
       <Community />

@@ -32,7 +32,30 @@ export const Footer = () => {
   const { footer } = COPY;
 
   return (
-    <Section theme="footer" className="border-t border-[var(--divider-dark)] pt-16! pb-10!">
+    <Section theme="footer" className="border-t border-[var(--divider-dark)] pt-20! pb-10! overflow-hidden">
+      {/* Oversized wordmark */}
+      <div className="mx-auto mb-16 max-w-[1100px]">
+        <p
+          className="whitespace-nowrap text-center font-[family-name:var(--font-cormorant-garamond)] font-light leading-none tracking-[0.02em] text-[var(--text-light)]/90 text-[clamp(34px,7.2vw,104px)]"
+        >
+          Marry Like a <span className="font-normal">CEO</span>
+        </p>
+        <div className="mx-auto mt-10 flex items-center gap-6">
+          <span className="hairline-gold flex-1" aria-hidden="true" />
+          <span className="font-[family-name:var(--font-dm-sans)] text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--gold)]">
+            #IChooseHim
+          </span>
+          <span
+            className="h-px flex-1"
+            style={{
+              background:
+                "linear-gradient(to left, var(--gold) 0%, color-mix(in srgb, var(--gold) 25%, transparent) 100%)",
+            }}
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+
       <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-10 text-center lg:flex-row lg:items-start lg:text-left">
         {/* Left — Logo + tagline */}
         <div className="flex-1">

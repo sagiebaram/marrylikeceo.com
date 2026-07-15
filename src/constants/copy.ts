@@ -8,13 +8,27 @@ export const COPY = {
       { label: "Community", href: "#community" },
       { label: "FAQ", href: "#faq" },
     ],
+    cta: "Join an Experience",
+    ctaHref: "#experience",
   },
   hero: {
+    eyebrow: "A Roadmap to Marriage for Ambitious Women",
+    headline: "Don’t fall in love.",
+    headlineAccent: "Lead it.",
+    subhead:
+      "A proven system that applies business strategy to finding — and choosing — the right partner.",
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
-    emailCta: "Subscribe",
-    emailMicro: "Get the newsletter — new Experiences, the book, and what’s next.",
+    experienceCta: "Join an Experience",
+    experienceMicro: "Free to join — a new topic every month.",
+    imageAlt:
+      "Ariel Yankelewitz standing in a glass conservatory, white suit, direct gaze",
+  },
+  quoteBand: {
+    line: "You don’t have a love problem.",
+    accent: "You have a system problem.",
+    imageAlt: "Ariel Yankelewitz poolside, black and white",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",
@@ -65,6 +79,8 @@ export const COPY = {
   },
   story: {
     eyebrow: "The Proof of Concept",
+    imageAlt: "Ariel Yankelewitz seated in a glass conservatory, black and white",
+    imageAltSecondary: "Ariel Yankelewitz at home, seated at a glass table",
     quote:
       "I didn\u2019t find my husband. I designed the conditions to meet him.",
     paragraphs: [
@@ -77,9 +93,9 @@ export const COPY = {
   },
   experience: {
     eyebrow: "The Experience",
-    headline: "Every month, a new entry point.",
-    headlineAccent:
-      "You don\u2019t need to start at the beginning. You just need to start.",
+    headline: "Every month,",
+    headlineAccent: "a new entry point.",
+    intro: "You don\u2019t need to start at the beginning. You just need to start.",
     body: "Marry Like a CEO is a roadmap \u2014 with stages, milestones, and a destination. Each monthly Experience is a live virtual event with Ariel: a different topic, a different angle, a different moment in the journey. You can join at any point. Every session stands alone \u2014 and every session is part of something larger. The more you show up, the clearer the map becomes.",
     details: [
       "Live virtual event with Ariel, every month",
@@ -93,18 +109,22 @@ export const COPY = {
     cta: "See All Upcoming Experiences \u2192",
     ctaHref: "https://luma.com/marrylikeceo",
     micro: "Free to join. Dates and topics released on the calendar first.",
+    imageAlt: "Ariel Yankelewitz walking with purpose, black and white",
   },
   book: {
     eyebrow: "Coming July 2026",
     title: "Marry Like a CEO",
     subtitle: "The Roadmap for Women Meant for Marriage",
-    body: "The complete methodology in book form. Business frameworks, real stories, and the exact system Ariel used to find her second husband.",
+    headline: "The complete methodology,",
+    headlineAccent: "in book form.",
+    body: "Business frameworks, real stories, and the exact system Ariel used to find her second husband.",
+    coverNote: "Cover shown is a working design — the final cover is on its way.",
     cta: "Notify Me",
   },
   community: {
     eyebrow: "The Community",
     headline: "Join the women who think like you do.",
-    body: "The MLCEO community is growing on every platform. Find us where you already are.",
+    body: "The Marry Like a CEO community is growing on every platform. Find us where you already are.",
     channels: [
       {
         name: "WhatsApp",
@@ -137,9 +157,10 @@ export const COPY = {
     headline: "Your standards aren\u2019t too high.",
     headlineAccent: "Your strategy is too vague.",
     subhead: "Let\u2019s fix that.",
-    cta: "Subscribe",
-    micro: "Get the newsletter \u2014 new Experiences, the book, and what\u2019s next.",
+    cta: "Join the Waitlist",
+    micro: "No spam. Unsubscribe anytime.",
     hashtag: "#IChooseHim",
+    imageAlt: "Ariel Yankelewitz glancing back over her shoulder, black and white",
   },
   footer: {
     tagline: "A Roadmap to Marriage for Ambitious Women",

@@ -6,78 +6,131 @@ import { Button } from "@/components/ui/Button";
 import { EmailCapture } from "@/components/ui/EmailCapture";
 import { COPY } from "@/constants/copy";
 
-const EASE = [0.25, 0.46, 0.45, 0.94] as const;
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 28 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 1, delay, ease: EASE },
+});
 
 export const Hero = () => {
-
   return (
     <section
       id="hero"
-      className="relative min-h-[75svh] md:min-h-screen overflow-hidden bg-[var(--bg-dark)] text-[var(--text-light)]"
+      className="relative overflow-hidden bg-[var(--bg-dark)] text-[var(--text-light)]"
     >
-      {/* Background image — dimmed on mobile, full clarity on desktop */}
-      <Image
-        src="/images/hero.jpg"
-        alt="Marry Like a CEO"
-        fill
-        className="object-cover object-[50%_top] md:object-center opacity-30 md:opacity-100"
-        priority
-        sizes="100vw"
-      />
-
-      {/* Mobile gradient: transparent top → dark bottom for text readability */}
-      <div
-        className="absolute inset-0 pointer-events-none md:hidden"
-        style={{
-          background:
-            "linear-gradient(to bottom, transparent 0%, transparent 35%, var(--bg-dark) 65%)",
-        }}
-      />
-
-      {/* Desktop gradient: subtle bottom fade for button readability */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-48 pointer-events-none hidden md:block"
-        style={{
-          background:
-            "linear-gradient(to top, var(--bg-dark) 0%, transparent 100%)",
-        }}
-      />
-
-      {/* CTAs at bottom center */}
-      <div className="absolute inset-x-0 bottom-12 z-10 flex flex-col items-center px-6 md:px-0">
+      <div className="flex min-h-svh flex-col lg:block">
+        {/* Photo — top on mobile, right panel on desktop */}
+        <div className="relative order-1 h-[56svh] lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[44%]">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: EASE }}
-            className="flex flex-col sm:flex-row items-center gap-8"
+            initial={{ scale: 1.08, opacity: 0.5 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 2, ease: EASE }}
+            className="absolute inset-0"
           >
-            <div className="flex w-full flex-col items-center gap-2 sm:w-auto">
-              <Button
-                variant="primary"
-                href={COPY.hero.whatsappLink}
-                className="!px-8 !py-4 !text-base w-full sm:w-auto"
-              >
-                {COPY.hero.cta}
-              </Button>
-              <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-                {COPY.hero.ctaMicro}
-              </p>
-            </div>
-            <div className="flex w-full flex-col items-center gap-2 sm:w-[420px]">
-              <EmailCapture
-                source="hero"
-                variant="inline"
-                ctaText={COPY.hero.emailCta}
-                buttonVariant="secondary"
-                className="w-full"
-                fieldClassName="rounded-[2px] border px-4 py-4 bg-[var(--bg-dark)]/40"
-                buttonClassName="!px-8 !py-4 !text-base whitespace-nowrap w-full sm:w-auto"
-              />
-              <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
-                {COPY.hero.emailMicro}
-              </p>
-            </div>
+            <Image
+              src="/images/ariel-hero.jpg"
+              alt={COPY.hero.imageAlt}
+              fill
+              className="object-cover object-[50%_18%]"
+              priority
+              sizes="(max-width: 1024px) 100vw, 44vw"
+            />
           </motion.div>
+
+          <div
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-40 lg:hidden"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 0%, var(--bg-dark) 96%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-y-0 left-0 hidden w-56 lg:block"
+            style={{
+              background:
+                "linear-gradient(to right, var(--bg-dark) 0%, transparent 100%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-48 lg:block"
+            style={{
+              background:
+                "linear-gradient(to top, var(--bg-dark) 0%, transparent 100%)",
+            }}
+          />
+        </div>
+
+        {/* Copy panel — overlaps onto the photo on desktop */}
+        <div className="relative z-10 order-2 flex flex-1 flex-col justify-center px-6 pb-16 pt-4 lg:min-h-svh lg:justify-center lg:px-12 lg:pb-28 lg:pt-28 xl:pl-24">
+          <div className="w-full lg:max-w-[76%]">
+            <motion.div {...fadeUp(0.1)} className="flex items-center gap-4">
+              <span className="hairline-gold w-10 flex-none" aria-hidden="true" />
+              <p className="font-[family-name:var(--font-dm-sans)] text-[11px] font-medium uppercase tracking-[0.3em] text-[var(--gold)] md:text-xs">
+                {COPY.hero.eyebrow}
+              </p>
+            </motion.div>
+
+            <motion.h1
+              {...fadeUp(0.25)}
+              className="mt-8 font-[family-name:var(--font-cormorant-garamond)] text-[clamp(52px,9vw,128px)] font-light leading-[0.98] tracking-[-0.015em]"
+            >
+              {COPY.hero.headline}
+              <br />
+              <em className="text-[var(--gold)]">{COPY.hero.headlineAccent}</em>
+            </motion.h1>
+
+            <motion.p
+              {...fadeUp(0.4)}
+              className="mt-8 max-w-[460px] font-[family-name:var(--font-dm-sans)] text-[16px] font-light leading-relaxed text-[var(--text-secondary)] md:text-[17px]"
+            >
+              {COPY.hero.subhead}
+            </motion.p>
+
+            <motion.div
+              {...fadeUp(0.55)}
+              className="mt-11 flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8"
+            >
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="primary"
+                  href={COPY.hero.whatsappLink}
+                  className="!px-10 !py-4"
+                >
+                  {COPY.hero.cta}
+                </Button>
+                <p className="font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+                  {COPY.hero.ctaMicro}
+                </p>
+              </div>
+              <div className="flex w-full flex-col gap-2 sm:max-w-[360px]">
+                <EmailCapture
+                  source="hero"
+                  variant="inline"
+                  ctaText={COPY.hero.experienceCta}
+                />
+                <p className="max-w-[300px] font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+                  {COPY.hero.experienceMicro}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Scroll cue */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.4, ease: EASE }}
+          className="absolute bottom-8 left-6 z-10 hidden items-center gap-3 lg:flex lg:left-12 xl:left-24"
+          aria-hidden="true"
+        >
+          <span className="block h-px w-12 bg-[var(--divider-dark)]" />
+          <span className="font-[family-name:var(--font-dm-sans)] text-[10px] font-medium uppercase tracking-[0.25em] text-[var(--text-secondary)]">
+            Scroll
+          </span>
+        </motion.div>
       </div>
     </section>
   );
