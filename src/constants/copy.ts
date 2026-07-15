@@ -28,7 +28,7 @@ export const COPY = {
   quoteBand: {
     line: "You don’t have a love problem.",
     accent: "You have a system problem.",
-    imageAlt: "Ariel Yankelewitz poolside, black and white",
+    imageAlt: "Ariel Yankelewitz seated at home",
   },
   strategyGap: {
     eyebrow: "The Strategy Gap",
@@ -36,7 +36,7 @@ export const COPY = {
     headlineAccent: "Why not your next relationship?",
     paragraphs: [
       "You've closed deals, built teams, scaled businesses. You make sharp decisions in every room you walk into.",
-      "But when it comes to love, you're operating without a system. No framework. No criteria. No conversion strategy.",
+      "But when it comes to love, you're operating without a system. No framework. No criteria. No strategy.",
     ],
     closingBold: "You're not asking for too much.",
     closingAccent: "You're just missing a method.",
@@ -46,10 +46,10 @@ export const COPY = {
     headline: "Business frameworks.",
     headlineAccent: "Applied to love.",
     body: [
-      "Marry Like a CEO is not dating advice. It's a system — the same one Ariel used to build a business that converts 50–75% of discovery calls, prices at 2–3x market rate, and scales with discipline.",
-      "She applied it to her love life. It worked.",
+      "Marry Like a CEO is not dating advice. It's a system — built from the same frameworks that grow companies, applied to the decision that shapes your life most.",
+      "Four stages, in order, each one building on the last.",
     ],
-    bodyClosing: "Now she teaches it.",
+    bodyClosing: "You stop waiting to be chosen — and start choosing.",
     cards: [
       {
         step: "01",
@@ -79,13 +79,13 @@ export const COPY = {
   },
   story: {
     eyebrow: "The Proof of Concept",
-    imageAlt: "Ariel Yankelewitz seated in a glass conservatory, black and white",
-    imageAltSecondary: "Ariel Yankelewitz at home, seated at a glass table",
+    imageAlt: "Ariel Yankelewitz seated in a glass conservatory",
+    imageAltSecondary: "Ariel Yankelewitz at home with her husband and their dogs",
     quote:
       "I didn\u2019t find my husband. I designed the conditions to meet him.",
     paragraphs: [
-      "Ariel is a successful Israeli businesswoman who built and ran her own business using a proven system: identify product-market fit, price at 2\u20133x market rate, convert 50\u201375% of discovery calls.",
-      "As a divorced woman rebuilding her life, she did what she knew how to do \u2014 she applied the same system to finding a partner that she had used to build her business.",
+      "Ariel spent 30 years building a business from the ground up in the beverage industry \u2014 five bartending and mixology schools nationwide, a national safe-drinking movement, work with Fortune 500 companies and Ivy League schools, and coverage in 40+ national outlets. The systems she built took her clients\u2019 conversions to 50\u201375% and let them price 2\u20133x market value.",
+      "She spent three years healing \u2014 cleansing, tuning back into herself \u2014 before she did what she knew how to do. She applied the same systems that built her business to finding a partner.",
       "It worked. She found her second husband.",
     ],
     beat: "Then her marriage ended.",
@@ -109,7 +109,7 @@ export const COPY = {
     cta: "See All Upcoming Experiences \u2192",
     ctaHref: "https://luma.com/marrylikeceo",
     micro: "Free to join. Dates and topics released on the calendar first.",
-    imageAlt: "Ariel Yankelewitz walking with purpose, black and white",
+    imageAlt: "Ariel Yankelewitz walking with purpose",
   },
   book: {
     eyebrow: "Coming July 2026",

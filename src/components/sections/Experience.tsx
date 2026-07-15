@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import { motion } from "motion/react";
 
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { DuotoneImage } from "@/components/ui/DuotoneImage";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -48,10 +48,10 @@ export const Experience = () => {
         <div className="relative hidden lg:col-span-5 lg:block">
           <div className="relative h-full min-h-[620px] overflow-hidden">
             <motion.div {...imageZoom} className="absolute inset-0">
-              <Image
-                src="/images/ariel-walk.jpg"
+              <DuotoneImage
+                srcColor="/images/ariel-walk.jpg"
+                srcBW="/images/ariel-walk-bw.jpg"
                 alt={experience.imageAlt}
-                fill
                 className="object-cover object-[50%_20%]"
                 sizes="38vw"
               />

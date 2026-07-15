@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -15,11 +16,11 @@ const fadeUp = (delay: number) => ({
 });
 
 export const StrategyGap = () => (
-  <Section theme="light" className="overflow-hidden">
+  <Section theme="light" className="overflow-hidden py-20 lg:py-28 xl:py-32">
     <div className="relative max-w-[900px]">
       <motion.div {...fadeUp(0)} className="flex items-center gap-4">
         <span className="hairline-gold w-10 flex-none" aria-hidden="true" />
-        <Eyebrow color="crimson">{COPY.strategyGap.eyebrow}</Eyebrow>
+        <Eyebrow color="gold">{COPY.strategyGap.eyebrow}</Eyebrow>
       </motion.div>
 
       <motion.h2
@@ -32,7 +33,7 @@ export const StrategyGap = () => (
       </motion.h2>
     </div>
 
-    <div className="relative mt-16 grid gap-10 md:grid-cols-12 lg:mt-20">
+    <div className="relative mt-10 grid gap-10 md:grid-cols-12 lg:mt-14">
       <motion.p
         {...fadeUp(0.2)}
         className="font-[family-name:var(--font-dm-sans)] font-light text-[17px] leading-relaxed text-[#555] md:col-span-4 md:col-start-3"
@@ -46,11 +47,30 @@ export const StrategyGap = () => (
       >
         {COPY.strategyGap.paragraphs[1]}
       </motion.p>
+
+      {/* Hand-drawn heel illustration filling the open left column */}
+      <motion.div
+        initial={{ opacity: 0, y: 24, scale: 0.97 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        className="mx-auto w-[200px] md:col-span-5 md:col-start-1 md:mx-0 md:-mt-2 md:w-full md:max-w-[300px] md:pl-2"
+        aria-hidden="true"
+      >
+        <Image
+          src="/images/heel-illustration.png"
+          alt=""
+          width={880}
+          height={787}
+          className="h-auto w-full"
+          sizes="(max-width: 768px) 240px, 380px"
+        />
+      </motion.div>
     </div>
 
     <motion.p
       {...fadeUp(0.45)}
-      className="mt-16 text-right font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,3.2vw,36px)] font-light leading-snug text-[var(--text-dark)] lg:mt-24"
+      className="mt-6 text-right font-[family-name:var(--font-cormorant-garamond)] text-[clamp(24px,3.2vw,36px)] font-light leading-snug text-[var(--text-dark)] lg:mt-8"
     >
       {COPY.strategyGap.closingBold}
       <br />

@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { DuotoneImage } from "@/components/ui/DuotoneImage";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -50,10 +50,10 @@ export const Story = () => {
         >
           <div className="relative aspect-[3/4] w-[88%] overflow-hidden">
             <motion.div {...imageZoom} className="absolute inset-0">
-              <Image
-                src="/images/ariel-story.jpg"
+              <DuotoneImage
+                srcColor="/images/ariel-story.jpg"
+                srcBW="/images/ariel-story-bw.jpg"
                 alt={story.imageAlt}
-                fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 88vw, 42vw"
               />
@@ -70,10 +70,10 @@ export const Story = () => {
             className="absolute bottom-0 right-0 w-[44%] border-[6px] border-[var(--bg-dark)] shadow-[0_40px_80px_-24px_rgba(0,0,0,0.65)] lg:-right-4"
           >
             <motion.div {...fadeUp(0.3)} className="relative aspect-[3/4]">
-              <Image
-                src="/images/ariel-study.jpg"
+              <DuotoneImage
+                srcColor="/images/ariel-study.jpg"
+                srcBW="/images/ariel-study-bw.jpg"
                 alt={story.imageAltSecondary}
-                fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 40vw, 20vw"
               />

@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/Button";
-import { EmailCapture } from "@/components/ui/EmailCapture";
+import { DuotoneImage } from "@/components/ui/DuotoneImage";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -29,13 +28,15 @@ export const Hero = () => {
             transition={{ duration: 2, ease: EASE }}
             className="absolute inset-0"
           >
-            <Image
-              src="/images/ariel-hero.jpg"
+            <DuotoneImage
+              srcColor="/images/ariel-hero.jpg"
+              srcBW="/images/ariel-hero-bw.jpg"
               alt={COPY.hero.imageAlt}
-              fill
               className="object-cover object-[50%_18%]"
               priority
               sizes="(max-width: 1024px) 100vw, 44vw"
+              revealOnLoad
+              revealDelay={1.1}
             />
           </motion.div>
 
@@ -104,13 +105,15 @@ export const Hero = () => {
                   {COPY.hero.ctaMicro}
                 </p>
               </div>
-              <div className="flex w-full flex-col gap-2 sm:max-w-[360px]">
-                <EmailCapture
-                  source="hero"
-                  variant="inline"
-                  ctaText={COPY.hero.experienceCta}
-                />
-                <p className="max-w-[300px] font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
+              <div className="flex flex-col gap-2">
+                <Button
+                  variant="secondary"
+                  href="#experience"
+                  className="!px-10 !py-4"
+                >
+                  {COPY.hero.experienceCta}
+                </Button>
+                <p className="max-w-[260px] font-[family-name:var(--font-dm-sans)] text-xs text-[var(--text-secondary)]">
                   {COPY.hero.experienceMicro}
                 </p>
               </div>

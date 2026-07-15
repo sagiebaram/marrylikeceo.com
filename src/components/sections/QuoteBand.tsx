@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 
+import { DuotoneImage } from "@/components/ui/DuotoneImage";
 import { COPY } from "@/constants/copy";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -23,10 +23,10 @@ export const QuoteBand = () => {
     >
       {/* Parallax photograph */}
       <motion.div className="absolute -inset-y-[12%] inset-x-0" style={{ y }}>
-        <Image
-          src="/images/ariel-band.jpg"
+        <DuotoneImage
+          srcColor="/images/ariel-band.jpg"
+          srcBW="/images/ariel-band-bw.jpg"
           alt={COPY.quoteBand.imageAlt}
-          fill
           className="object-cover object-[28%_30%]"
           sizes="100vw"
         />
