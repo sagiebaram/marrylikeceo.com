@@ -41,6 +41,13 @@ export const Hero = () => {
           </motion.div>
 
           <div
+            className="pointer-events-none absolute inset-x-0 top-0 h-32 md:h-40"
+            style={{
+              background:
+                "linear-gradient(to bottom, var(--bg-dark) 0%, transparent 100%)",
+            }}
+          />
+          <div
             className="pointer-events-none absolute inset-x-0 bottom-0 h-40 lg:hidden"
             style={{
               background:
@@ -69,10 +76,7 @@ export const Hero = () => {
             <motion.div {...fadeUp(0.1)} className="flex items-center gap-4">
               <span className="hairline-gold w-10 flex-none" aria-hidden="true" />
               <p className="font-[family-name:var(--font-dm-sans)] text-[11px] font-medium uppercase tracking-[0.3em] text-[var(--gold)] md:text-xs">
-                {COPY.hero.eyebrow}{" "}
-                <span className="font-[family-name:var(--font-cormorant-garamond)] text-[13px] font-light normal-case italic tracking-normal text-[var(--text-secondary)] md:text-sm">
-                  {COPY.hero.eyebrowByline}
-                </span>
+                {COPY.hero.eyebrow}
               </p>
             </motion.div>
 
@@ -121,6 +125,13 @@ export const Hero = () => {
                 </p>
               </div>
             </motion.div>
+
+            <motion.p
+              {...fadeUp(0.68)}
+              className="mt-10 font-[family-name:var(--font-cormorant-garamond)] text-sm italic text-[var(--text-secondary)] md:text-base"
+            >
+              {COPY.hero.eyebrowByline}
+            </motion.p>
           </div>
         </div>
 
