@@ -84,7 +84,7 @@ export const Story = () => {
                     "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)",
                 }}
               >
-                <p className="text-center font-[family-name:var(--font-dm-sans)] text-[9px] font-medium uppercase tracking-[0.15em] text-white">
+                <p className="text-center font-[family-name:var(--font-dm-sans)] text-[10px] font-medium uppercase tracking-[0.25em] text-white">
                   {story.imageCaption}
                 </p>
               </div>

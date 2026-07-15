@@ -16,12 +16,12 @@ export const COPY = {
     headline: "Don’t fall in love.",
     headlineAccent: "Lead it.",
     subhead:
-      "A proven system that applies business strategy to finding — and choosing — the right partner, by choosing yourself.",
+      "A proven system that applies business strategy to finding - and choosing - the right partner, by choosing yourself.",
     cta: "Join the Community",
     ctaMicro: "Free WhatsApp group for ambitious women.",
     whatsappLink: "https://chat.whatsapp.com/PLACEHOLDER",
     experienceCta: "Join an Experience",
-    experienceMicro: "Free to join — a new topic every month.",
+    experienceMicro: "Free to join - a new topic every month.",
     imageAlt:
       "Ariel Yankelewitz standing in a glass conservatory, white suit, direct gaze",
   },
@@ -48,16 +48,16 @@ export const COPY = {
     headline: "Business frameworks.",
     headlineAccent: "Applied to love.",
     body: [
-      "Marry Like a CEO is not dating advice. It's a system — built from the same frameworks that grow companies, applied to the decision that shapes your life most.",
+      "Marry Like a CEO is not dating advice. It's a system - built from the same frameworks that grow companies, applied to the decision that shapes your life most.",
       "Four stages, in order, each one building on the last.",
     ],
-    bodyClosing: "You stop waiting to be chosen — and start choosing.",
+    bodyClosing: "You stop waiting to be chosen - and start choosing.",
     cards: [
       {
         step: "01",
         icon: "Target",
         title: "Product-Market Fit",
-        body: "Define exactly who you're looking for — and who's looking for you.",
+        body: "Define exactly who you're looking for - and who's looking for you.",
       },
       {
         step: "02",
@@ -75,7 +75,7 @@ export const COPY = {
         step: "04",
         icon: "Heart",
         title: "Conversion & Commitment",
-        body: "From first date to forever — with a system, not a prayer.",
+        body: "From first date to forever - with a system, not a prayer.",
       },
     ],
   },
@@ -83,13 +83,13 @@ export const COPY = {
     eyebrow: "The Proof of Concept",
     imageAlt: "Ariel Yankelewitz seated in a glass conservatory",
     imageAltSecondary: "Ariel Yankelewitz at home with her husband and their dogs",
-    imageCaption: "Ariel & her husband, today",
+    imageCaption: "Ariel & Shmuel, today",
     quote:
       "I didn\u2019t find my husband. I designed the conditions to meet him.",
     paragraphs: [
-      "Ariel spent 30 years building a business from the ground up in the beverage industry \u2014 five bartending and mixology schools nationwide, a national safe-drinking movement, work with Fortune 500 companies and Ivy League schools, and coverage in 40+ national outlets. The systems she built took her clients\u2019 conversions to 50\u201375% and let them price 2\u20133x market value.",
-      "She spent three years healing \u2014 cleansing, tuning back into herself \u2014 before she did what she knew how to do. She applied the same systems that built her business to finding a partner.",
-      "It worked. She found her second husband.",
+      "Ariel spent 30 years building a business from the ground up in the beverage industry - five bartending and mixology schools nationwide, a national safe-drinking movement, work with Fortune 500 companies and Ivy League schools, and coverage in 40+ national outlets. The systems she built took her clients\u2019 conversions to 50\u201375% and let them price 2\u20133x market value.",
+      "She spent three years healing - cleansing, tuning back into herself - before she did what she knew how to do. She applied the same systems that built her business to finding a partner.",
+      "It worked. She found her second husband, Shmuel.",
     ],
     beat: "Then her first marriage ended.",
     closing: "Now she teaches the method.",
@@ -99,12 +99,12 @@ export const COPY = {
     headline: "Every month,",
     headlineAccent: "a new entry point.",
     intro: "You don\u2019t need to start at the beginning. You just need to start.",
-    body: "Marry Like a CEO is a roadmap \u2014 with stages, milestones, and a destination. Each monthly Experience is a live virtual event with Ariel: a different topic, a different angle, a different moment in the journey. You can join at any point. Every session stands alone \u2014 and every session is part of something larger. The more you show up, the clearer the map becomes.",
+    body: "Marry Like a CEO is a roadmap - with stages, milestones, and a destination. Each monthly Experience is a live virtual event with Ariel: a different topic, a different angle, a different moment in the journey. You can join at any point. Every session stands alone - and every session is part of something larger. The more you show up, the clearer the map becomes.",
     details: [
       "Live virtual event with Ariel, every month",
-      "A different topic each time \u2014 enter wherever it resonates",
-      "Ask Ariel anything \u2014 every session includes open Q&A",
-      "Open to all \u2014 no prerequisites, no starting over",
+      "A different topic each time - enter wherever it resonates",
+      "Ask Ariel anything - every session includes open Q&A",
+      "Open to all - no prerequisites, no starting over",
       "12 Experiences planned this year",
     ],
     closing:
@@ -121,7 +121,7 @@ export const COPY = {
     headline: "The complete methodology,",
     headlineAccent: "in book form.",
     body: "Business frameworks, real stories, and the exact system Ariel used to find her second husband.",
-    coverNote: "Cover shown is a working design — the final cover is on its way.",
+    coverNote: "Cover shown is a working design - the final cover is on its way.",
     cta: "Notify Me",
   },
   community: {

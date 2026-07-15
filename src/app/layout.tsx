@@ -24,9 +24,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://marrylikeceo.com"),
-  title: "Marry Like a CEO — A Roadmap to Marriage for Ambitious Women",
+  title: "Marry Like a CEO - A Roadmap to Marriage for Ambitious Women",
   description:
-    "A proven system that applies business strategy to finding — and choosing — the right partner. Join the waitlist for the July 2026 Experience and book launch.",
+    "A proven system that applies business strategy to finding - and choosing - the right partner. Join the waitlist for the July 2026 Experience and book launch.",
   keywords: [
     "marriage strategy",
     "ambitious women",
