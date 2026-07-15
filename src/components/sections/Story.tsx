@@ -77,6 +77,17 @@ export const Story = () => {
                 className="object-cover"
                 sizes="(max-width: 1024px) 40vw, 20vw"
               />
+              <div
+                className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-center pb-2 pt-8"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%)",
+                }}
+              >
+                <p className="text-center font-[family-name:var(--font-dm-sans)] text-[9px] font-medium uppercase tracking-[0.15em] text-white">
+                  {story.imageCaption}
+                </p>
+              </div>
             </motion.div>
           </motion.div>
         </div>

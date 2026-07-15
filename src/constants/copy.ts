@@ -34,6 +34,8 @@ export const COPY = {
     eyebrow: "The Strategy Gap",
     headline: "You run due diligence on every hire.",
     headlineAccent: "Why not your next relationship?",
+    labelBusiness: "In Business",
+    labelLove: "In Love",
     paragraphs: [
       "You've closed deals, built teams, scaled businesses. You make sharp decisions in every room you walk into.",
       "But when it comes to love, you're operating without a system. No framework. No criteria. No strategy.",
@@ -81,6 +83,7 @@ export const COPY = {
     eyebrow: "The Proof of Concept",
     imageAlt: "Ariel Yankelewitz seated in a glass conservatory",
     imageAltSecondary: "Ariel Yankelewitz at home with her husband and their dogs",
+    imageCaption: "Ariel & her husband, today",
     quote:
       "I didn\u2019t find my husband. I designed the conditions to meet him.",
     paragraphs: [
@@ -88,7 +91,7 @@ export const COPY = {
       "She spent three years healing \u2014 cleansing, tuning back into herself \u2014 before she did what she knew how to do. She applied the same systems that built her business to finding a partner.",
       "It worked. She found her second husband.",
     ],
-    beat: "Then her marriage ended.",
+    beat: "Then her first marriage ended.",
     closing: "Now she teaches the method.",
   },
   experience: {
