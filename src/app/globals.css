@@ -38,14 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* offset anchor targets so section tops clear the fixed navbar */
   scroll-padding-top: 72px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 }
 
 body {
@@ -57,4 +50,32 @@ body {
 ::selection {
   background: var(--crimson);
   color: white;
+}
+
+/* Luxury easing shared across interactions */
+:root {
+  --ease-luxe: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Gold hairline used as an editorial divider */
+.hairline-gold {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--gold) 0%,
+    color-mix(in srgb, var(--gold) 25%, transparent) 100%
+  );
+}
+
+/* (chapter numerals removed per 07-14-2026 review) */
+
+/* Fine-tuned rendering for editorial photography */
+img {
+  image-rendering: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

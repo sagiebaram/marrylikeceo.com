@@ -28,7 +28,7 @@ export const AccordionItem = ({
         aria-controls={`${id}-content`}
         className="flex w-full items-center justify-between gap-4 bg-transparent border-none cursor-pointer py-6 text-left"
       >
-        <span className="font-[family-name:var(--font-dm-sans)] text-[16px] font-medium text-[var(--text-dark)] leading-snug pr-4">
+        <span className="font-[family-name:var(--font-cormorant-garamond)] text-[19px] md:text-[21px] font-normal text-[var(--text-dark)] leading-snug pr-4">
           {question}
         </span>
         <span

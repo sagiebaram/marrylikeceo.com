@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import "./globals.css";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -23,9 +24,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://marrylikeceo.com"),
-  title: "Marry Like a CEO — A Roadmap to Marriage for Ambitious Women",
+  title: "Marry Like a CEO - A Roadmap to Marriage for Ambitious Women",
   description:
-    "A proven system that applies business strategy to finding — and choosing — the right partner. Join the waitlist for the July 2026 Experience and book launch.",
+    "A proven system that applies business strategy to finding - and choosing - the right partner. Join the waitlist for the July 2026 Experience and book launch.",
   keywords: [
     "marriage strategy",
     "ambitious women",
@@ -37,14 +38,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marry Like a CEO",
     description: "Business frameworks. Applied to love. Join the waitlist.",
-    images: ["/images/hero.jpg"],
+    images: ["/images/og.jpg"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Marry Like a CEO",
     description: "Business frameworks. Applied to love.",
-    images: ["/images/hero.jpg"],
+    images: ["/images/og.jpg"],
   },
 };
 
@@ -60,6 +61,7 @@ const RootLayout = ({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
+        <ScrollProgress />
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />

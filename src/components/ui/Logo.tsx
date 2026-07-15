@@ -17,7 +17,7 @@ export const Logo = ({ className }: LogoProps) => {
         src="/images/logo-icon.png"
         width={44}
         height={44}
-        alt="MLCEO"
+        alt="Marry Like a CEO"
         className="h-8 w-8 md:h-11 md:w-11"
       />
       Marry Like a <span className="font-medium">CEO</span>

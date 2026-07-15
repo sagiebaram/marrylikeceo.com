@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
+import { Button } from "@/components/ui/Button";
 import { COPY } from "@/constants/copy";
 import { cn } from "@/lib/utils";
 
@@ -33,16 +34,16 @@ export const Navbar = () => {
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 z-50 flex h-16 md:h-[72px] w-full items-center justify-between gap-4 px-4 md:px-12 transition-all duration-400",
+          "fixed top-0 left-0 z-50 flex h-16 md:h-[76px] w-full items-center justify-between gap-4 px-4 md:px-10 transition-all duration-500",
           scrolled
-            ? "bg-[var(--bg-dark)]/95 backdrop-blur-lg border-b border-[var(--divider-dark)]"
+            ? "bg-[var(--bg-dark)]/95 backdrop-blur-lg border-b border-[var(--divider-dark)] shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
             : "bg-transparent border-b border-transparent",
         )}
       >
         <Logo />
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {COPY.nav.links.map((link) => (
             <button
               key={link.href}
@@ -52,11 +53,18 @@ export const Navbar = () => {
               {link.label}
             </button>
           ))}
+          <Button
+            variant="secondary"
+            onClick={() => handleNav(COPY.nav.ctaHref)}
+            className="!px-6 !py-2.5 !text-xs uppercase tracking-[0.15em]"
+          >
+            {COPY.nav.cta}
+          </Button>
         </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden bg-transparent border-none cursor-pointer text-[var(--gold)]"
+          className="lg:hidden bg-transparent border-none cursor-pointer text-[var(--gold)]"
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
@@ -66,7 +74,7 @@ export const Navbar = () => {
 
       {/* Mobile overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-[999] bg-[var(--bg-dark)]/98 flex flex-col items-center justify-center gap-8">
+        <div className="fixed inset-0 z-[999] bg-[var(--bg-dark)]/98 flex flex-col items-center justify-center gap-7 px-8">
           <button
             className="absolute top-5 right-6 bg-transparent border-none cursor-pointer text-[var(--gold)]"
             onClick={() => setMobileOpen(false)}
@@ -78,11 +86,20 @@ export const Navbar = () => {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="font-[family-name:var(--font-cormorant-garamond)] text-2xl font-light text-[var(--text-light)] bg-transparent border-none cursor-pointer"
+              className="font-[family-name:var(--font-cormorant-garamond)] text-[28px] font-light text-[var(--text-light)] bg-transparent border-none cursor-pointer"
             >
               {link.label}
             </button>
           ))}
+          <div className="mt-4 w-full max-w-[280px]">
+            <Button
+              variant="primary"
+              onClick={() => handleNav(COPY.nav.ctaHref)}
+              className="w-full !py-4"
+            >
+              {COPY.nav.cta}
+            </Button>
+          </div>
         </div>
       )}
 
@@ -96,7 +113,7 @@ export const Navbar = () => {
           width: 0;
           height: 1px;
           background: var(--gold);
-          transition: width 0.3s ease;
+          transition: width 0.3s var(--ease-luxe, ease);
         }
         .nav-link:hover::after {
           width: 100%;

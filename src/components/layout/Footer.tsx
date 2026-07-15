@@ -20,19 +20,50 @@ const LinkedinIcon = ({ className, size = 16 }: { readonly className?: string; r
   </svg>
 );
 
+const YoutubeIcon = ({ className, size = 16 }: { readonly className?: string; readonly size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  </svg>
+);
+
 const socialIcons: Record<string, React.ComponentType<{ readonly className?: string; readonly size?: number }>> = {
   WhatsApp: MessageCircle,
   Facebook: Users,
   Instagram: InstagramIcon,
   TikTok: Music2,
   LinkedIn: LinkedinIcon,
+  YouTube: YoutubeIcon,
 };
 
 export const Footer = () => {
   const { footer } = COPY;
 
   return (
-    <Section theme="footer" className="border-t border-[var(--divider-dark)] pt-16! pb-10!">
+    <Section theme="footer" className="border-t border-[var(--divider-dark)] pt-20! pb-10! overflow-hidden">
+      {/* Oversized wordmark */}
+      <div className="mx-auto mb-16 max-w-[1100px]">
+        <p
+          className="whitespace-nowrap text-center font-[family-name:var(--font-cormorant-garamond)] font-light leading-none tracking-[0.02em] text-[var(--text-light)]/90 text-[clamp(34px,7.2vw,104px)]"
+        >
+          Marry Like a <span className="font-normal">CEO</span>
+        </p>
+        <div className="mx-auto mt-10 flex items-center gap-6">
+          <span className="hairline-gold flex-1" aria-hidden="true" />
+          <span className="font-[family-name:var(--font-dm-sans)] text-[10px] font-medium uppercase tracking-[0.3em] text-[var(--gold)]">
+            #IChooseHim
+          </span>
+          <span
+            className="h-px flex-1"
+            style={{
+              background:
+                "linear-gradient(to left, var(--gold) 0%, color-mix(in srgb, var(--gold) 25%, transparent) 100%)",
+            }}
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+
       <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-10 text-center lg:flex-row lg:items-start lg:text-left">
         {/* Left — Logo + tagline */}
         <div className="flex-1">

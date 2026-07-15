@@ -8,16 +8,16 @@ interface ButtonProps {
   readonly onClick?: () => void;
   readonly className?: string;
   readonly href?: string;
-  readonly target?: "_blank" | "_self";
+  readonly target?: "_blank";
   readonly type?: "button" | "submit";
   readonly disabled?: boolean;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[var(--crimson)] text-white rounded-[2px] hover:bg-[var(--crimson-hover)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[var(--crimson)]/25 transition-all duration-200",
+    "bg-[var(--crimson)] text-white rounded-full hover:bg-[var(--crimson-hover)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[var(--crimson)]/25 transition-all duration-200",
   secondary:
-    "border border-[var(--gold)] text-[var(--gold)] rounded-[2px] hover:bg-[var(--gold)] hover:text-white transition-all duration-200",
+    "border border-[var(--gold)] text-[var(--gold)] rounded-full hover:bg-[var(--gold)] hover:text-white transition-all duration-200",
   ghost:
     "text-[var(--gold)] hover:underline underline-offset-4 transition-all duration-200",
 };

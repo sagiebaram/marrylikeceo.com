@@ -23,61 +23,56 @@ const LinkedinIcon = ({ className, size = 18 }: { readonly className?: string; r
   </svg>
 );
 
+const YoutubeIcon = ({ className, size = 18 }: { readonly className?: string; readonly size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  </svg>
+);
+
 const iconMap: Record<string, React.ComponentType<{ readonly className?: string; readonly size?: number }>> = {
   MessageCircle,
   Users,
   Instagram: InstagramIcon,
   Music2,
   Linkedin: LinkedinIcon,
+  Youtube: YoutubeIcon,
 };
 
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 28 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.15 },
-  transition: { duration: 0.6 },
-};
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.9, delay, ease: EASE },
+});
 
 export const Community = () => {
   const { community } = COPY;
 
   return (
-    <Section
-      theme="light"
-      id="community"
-      className="relative overflow-hidden text-center"
-    >
-      {/* Soft warm glow */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-0 h-[440px] w-[760px] -translate-x-1/2"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(184,151,90,0.12) 0%, transparent 70%)",
-        }}
-      />
-
-      <div className="relative z-10 mx-auto max-w-[1040px]">
-        <motion.div {...fadeUp}>
+    <Section theme="ivory" id="community" className="text-center">
+      <div className="mx-auto max-w-[1000px]">
+        <motion.div {...fadeUp(0)}>
           <Eyebrow color="crimson">{community.eyebrow}</Eyebrow>
         </motion.div>
 
         <motion.h2
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-6 font-[family-name:var(--font-cormorant-garamond)] font-light text-[clamp(28px,3.8vw,42px)] text-[var(--text-dark)]"
+          {...fadeUp(0.1)}
+          className="mt-6 font-[family-name:var(--font-cormorant-garamond)] font-light text-[clamp(32px,4.4vw,54px)] leading-[1.08] text-[var(--text-dark)]"
         >
           {community.headline}
         </motion.h2>
 
         <motion.p
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="mx-auto mt-4 max-w-[520px] font-[family-name:var(--font-dm-sans)] font-light text-[var(--text-secondary)]"
+          {...fadeUp(0.18)}
+          className="mx-auto mt-4 max-w-[480px] font-[family-name:var(--font-dm-sans)] font-light text-[17px] text-[#555]"
         >
           {community.body}
         </motion.p>
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
           {community.channels.map((channel, i) => {
             const Icon = iconMap[channel.icon];
             return (
@@ -86,23 +81,17 @@ export const Community = () => {
                 href={channel.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                {...fadeUp}
-                transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
-                className="group flex flex-col items-center gap-4 rounded-md border border-[var(--divider-light)] bg-white px-6 py-9 shadow-sm shadow-black/5 transition-all duration-300 hover:-translate-y-1.5 hover:border-[var(--gold)] hover:shadow-[0_18px_44px_rgba(184,151,90,0.22)]"
+                {...fadeUp(0.2 + i * 0.07)}
+                className="group flex min-w-[200px] items-center gap-3 border border-[var(--divider-light)] bg-white px-7 py-6 transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_50px_-24px_rgba(26,28,46,0.16)]"
               >
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[var(--bg-dark)] text-[var(--gold)] transition-all duration-300 group-hover:scale-105 group-hover:bg-[var(--crimson)] group-hover:text-white">
-                  {Icon && <Icon size={24} />}
-                </span>
-                <span className="font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--text-dark)]">
+                {Icon && <Icon size={18} className="text-[var(--gold)]" />}
+                <span className="flex-1 text-left font-[family-name:var(--font-dm-sans)] text-sm font-medium text-[var(--text-dark)]">
                   {channel.name}
                 </span>
-                <span className="flex items-center gap-1.5 font-[family-name:var(--font-dm-sans)] text-[11px] font-medium uppercase tracking-[0.18em] text-[var(--text-secondary)] transition-colors duration-300 group-hover:text-[var(--crimson)]">
-                  Follow
-                  <ArrowRight
-                    size={12}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5"
-                  />
-                </span>
+                <ArrowRight
+                  size={14}
+                  className="text-[var(--text-secondary)] transition-transform duration-500 group-hover:translate-x-1 group-hover:text-[var(--gold)]"
+                />
               </motion.a>
             );
           })}
