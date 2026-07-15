@@ -37,10 +37,10 @@ export const Navbar = () => {
           "fixed top-0 left-0 z-50 flex h-16 md:h-[76px] w-full items-center justify-between gap-4 px-4 md:px-10 transition-all duration-500",
           scrolled
             ? "bg-[var(--bg-dark)]/95 backdrop-blur-lg border-b border-[var(--divider-dark)] shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
-            : "bg-linear-to-b from-[var(--bg-dark)]/80 via-[var(--bg-dark)]/40 to-transparent border-b border-transparent",
+            : "bg-transparent border-b border-transparent",
         )}
       >
-        <Logo />
+        <Logo className={cn(!scrolled && "drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]")} />
 
         {/* Desktop links */}
         <div className="hidden lg:flex items-center gap-8">
@@ -48,7 +48,10 @@ export const Navbar = () => {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="nav-link font-[family-name:var(--font-dm-sans)] font-medium text-xs uppercase tracking-[0.15em] text-[var(--gold)] bg-transparent border-none cursor-pointer relative pb-0.5"
+              className={cn(
+                "nav-link font-[family-name:var(--font-dm-sans)] font-medium text-xs uppercase tracking-[0.15em] text-[var(--gold)] bg-transparent border-none cursor-pointer relative pb-0.5",
+                !scrolled && "drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]",
+              )}
             >
               {link.label}
             </button>
@@ -57,7 +60,10 @@ export const Navbar = () => {
             variant="secondary"
             href={COPY.nav.ctaHref}
             target="_blank"
-            className="!px-6 !py-2.5 !text-xs uppercase tracking-[0.15em]"
+            className={cn(
+              "!px-6 !py-2.5 !text-xs uppercase tracking-[0.15em]",
+              !scrolled && "drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]",
+            )}
           >
             {COPY.nav.cta}
           </Button>
@@ -65,7 +71,10 @@ export const Navbar = () => {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden bg-transparent border-none cursor-pointer text-[var(--gold)]"
+          className={cn(
+            "lg:hidden bg-transparent border-none cursor-pointer text-[var(--gold)]",
+            !scrolled && "drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]",
+          )}
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >

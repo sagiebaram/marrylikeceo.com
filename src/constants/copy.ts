@@ -13,7 +13,7 @@ export const COPY = {
   },
   hero: {
     eyebrow: "A Roadmap to Marriage for Ambitious Women",
-    eyebrowByline: "By Ariel Yankelewitz",
+    eyebrowByline: "by Ariel Yankelewitz",
     headline: "Don’t fall in love.",
     headlineAccent: "Lead it.",
     subhead:

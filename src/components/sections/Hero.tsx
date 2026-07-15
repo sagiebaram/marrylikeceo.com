@@ -66,12 +66,13 @@ export const Hero = () => {
         {/* Copy panel — overlaps onto the photo on desktop */}
         <div className="relative z-10 order-2 flex flex-1 flex-col justify-center px-6 pb-16 pt-4 lg:min-h-svh lg:justify-center lg:px-12 lg:pb-28 lg:pt-28 xl:pl-24">
           <div className="w-full lg:max-w-[76%]">
-            <motion.div {...fadeUp(0.1)} className="flex items-start gap-4">
-              <span className="hairline-gold mt-1.5 w-10 flex-none" aria-hidden="true" />
-              <p className="font-[family-name:var(--font-dm-sans)] text-[11px] font-medium uppercase leading-relaxed tracking-[0.3em] text-[var(--gold)] md:text-xs">
-                {COPY.hero.eyebrow}
-                <br />
-                {COPY.hero.eyebrowByline}
+            <motion.div {...fadeUp(0.1)} className="flex items-center gap-4">
+              <span className="hairline-gold w-10 flex-none" aria-hidden="true" />
+              <p className="font-[family-name:var(--font-dm-sans)] text-[11px] font-medium uppercase tracking-[0.3em] text-[var(--gold)] md:text-xs">
+                {COPY.hero.eyebrow}{" "}
+                <span className="font-[family-name:var(--font-cormorant-garamond)] text-[13px] font-light normal-case italic tracking-normal text-[var(--text-secondary)] md:text-sm">
+                  {COPY.hero.eyebrowByline}
+                </span>
               </p>
             </motion.div>
 
