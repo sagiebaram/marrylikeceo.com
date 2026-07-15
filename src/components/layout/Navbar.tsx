@@ -37,7 +37,7 @@ export const Navbar = () => {
           "fixed top-0 left-0 z-50 flex h-16 md:h-[76px] w-full items-center justify-between gap-4 px-4 md:px-10 transition-all duration-500",
           scrolled
             ? "bg-[var(--bg-dark)]/95 backdrop-blur-lg border-b border-[var(--divider-dark)] shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
-            : "bg-transparent border-b border-transparent",
+            : "bg-linear-to-b from-[var(--bg-dark)]/80 via-[var(--bg-dark)]/40 to-transparent border-b border-transparent",
         )}
       >
         <Logo />

@@ -17,40 +17,38 @@ const fadeUp = (delay: number) => ({
 
 export const TheSystem = () => (
   <Section theme="ivory" id="the-system" className="overflow-hidden">
-    <div className="relative grid gap-14 lg:grid-cols-12 lg:gap-20">
-      {/* Sticky intro rail */}
+    <div className="relative grid gap-14 lg:grid-cols-12 lg:gap-20 lg:items-center">
+      {/* Intro rail */}
       <div className="lg:col-span-4">
-        <div className="lg:sticky lg:top-32">
-          <motion.div {...fadeUp(0)}>
-            <Eyebrow color="crimson">{COPY.theSystem.eyebrow}</Eyebrow>
-          </motion.div>
+        <motion.div {...fadeUp(0)}>
+          <Eyebrow color="crimson">{COPY.theSystem.eyebrow}</Eyebrow>
+        </motion.div>
 
-          <motion.h2
-            {...fadeUp(0.1)}
-            className="mt-7 font-[family-name:var(--font-cormorant-garamond)] font-light text-[clamp(38px,4.5vw,64px)] leading-[1.04] text-[var(--text-dark)]"
-          >
-            {COPY.theSystem.headline}
-            <br />
-            <em>{COPY.theSystem.headlineAccent}</em>
-          </motion.h2>
+        <motion.h2
+          {...fadeUp(0.1)}
+          className="mt-7 font-[family-name:var(--font-cormorant-garamond)] font-light text-[clamp(38px,4.5vw,64px)] leading-[1.04] text-[var(--text-dark)]"
+        >
+          {COPY.theSystem.headline}
+          <br />
+          <em>{COPY.theSystem.headlineAccent}</em>
+        </motion.h2>
 
-          <motion.p
-            {...fadeUp(0.2)}
-            className="mt-7 font-[family-name:var(--font-dm-sans)] font-light text-[16px] leading-relaxed text-[#555]"
-          >
-            {COPY.theSystem.body[0]}
-          </motion.p>
+        <motion.p
+          {...fadeUp(0.2)}
+          className="mt-7 font-[family-name:var(--font-dm-sans)] font-light text-[16px] leading-relaxed text-[#555]"
+        >
+          {COPY.theSystem.body[0]}
+        </motion.p>
 
-          <motion.p
-            {...fadeUp(0.28)}
-            className="mt-4 font-[family-name:var(--font-dm-sans)] font-light text-[16px] leading-relaxed text-[#555]"
-          >
-            {COPY.theSystem.body[1]}{" "}
-            <span className="font-medium text-[var(--text-dark)]">
-              {COPY.theSystem.bodyClosing}
-            </span>
-          </motion.p>
-        </div>
+        <motion.p
+          {...fadeUp(0.28)}
+          className="mt-4 font-[family-name:var(--font-dm-sans)] font-light text-[16px] leading-relaxed text-[#555]"
+        >
+          {COPY.theSystem.body[1]}{" "}
+          <span className="font-medium text-[var(--text-dark)]">
+            {COPY.theSystem.bodyClosing}
+          </span>
+        </motion.p>
       </div>
 
       {/* Framework rows */}
