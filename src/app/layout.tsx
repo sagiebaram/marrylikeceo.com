@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { EntitySchema } from "@/components/SEO/EntitySchema";
 import "./globals.css";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -24,6 +25,9 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://marrylikeceo.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Marry Like a CEO - A Roadmap to Marriage for Ambitious Women",
   description:
     "A proven system that applies business strategy to finding - and choosing - the right partner. Join the waitlist for the July 2026 Experience and book launch.",
@@ -60,6 +64,7 @@ const RootLayout = ({
       className={`${cormorantGaramond.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <EntitySchema />
         <Navbar />
         <ScrollProgress />
         <main className="flex-1">{children}</main>
